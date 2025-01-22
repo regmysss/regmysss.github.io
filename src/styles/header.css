@@ -1,8 +1,14 @@
 .header {
+    background-color: var(--main-background-color);
+}
+
+.header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 90px;
-    background-color: var(--main-background-color);
+    margin: auto;
+    max-width: 1400px;
 }
 
 .nav-list {
@@ -11,4 +17,34 @@
     list-style: none;
     gap: 20px;
     font-size: 20px;
+}
+
+.btn-contact {
+    all: unset;
+    height: 50px;
+    padding: 0 25px;
+    background-color: var(--main-button-background-color);
+    color: var(--main-button-text-color);
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.btn-theme {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    background-color: var(--secondary-background-color);
+    color: var(--main-background-icon-color);
+    border-radius: 999px;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
 }

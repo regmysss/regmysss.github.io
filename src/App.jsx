@@ -1,5 +1,6 @@
 import { useTheme } from "./hooks/useTheme";
 import { Header } from "./components/Header";
+import { Home } from "./components/Home";
 
 function App() {
   const { theme, setTheme } = useTheme();
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
       <Header theme={theme} setTheme={setTheme} />
+      <Home />
     </>
   )
 }

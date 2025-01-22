@@ -1,5 +1,5 @@
 import '../styles/header.css';
-import { WiDaySunny } from "react-icons/wi";
+import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 
 export const Header = ({ theme, setTheme }) => {
 
@@ -9,21 +9,27 @@ export const Header = ({ theme, setTheme }) => {
 
     return (
         <header className='header'>
-            <nav className='nav'>
-                <ul className='nav-list'>
-                    <li>Home</li>
-                    <li>Projects</li>
-                    <li>Skills</li>
-                    <li>About</li>
-                </ul>
-            </nav>
-            <div className=''>
-                <button className='btn-contact'>
-                    Contact
-                </button>
-                <button className='btn-theme' onClick={toggleTheme}>
-                    <WiDaySunny className='icon-theme' />
-                </button>
+            <div className='header-content'>
+                <nav className='nav'>
+                    <ul className='nav-list'>
+                        <li>Home</li>
+                        <li>Projects</li>
+                        <li>Skills</li>
+                        <li>About</li>
+                    </ul>
+                </nav>
+                <div className='header-right'>
+                    <button className='btn-contact'>
+                        Contact
+                    </button>
+                    <button className='btn-theme' onClick={toggleTheme}>
+                        {
+                            theme === 'light' ?
+                                <IoSunnyOutline className='icon-theme' /> :
+                                <IoMoonOutline className='icon-theme' />
+                        }
+                    </button>
+                </div>
             </div>
         </header>
     )
