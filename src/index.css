@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+}
+
+html[data-theme="light"] {
+  --main-background-color: #ffffff;
+  --main-text-color: #000000;
+  --main-button-background-color: #E00000;
+  --main-button-text-color: #ffffff;
+  --main-background-icon-color: #000000;
+  --main-border-color: #000000;
+  --secondary-background-color: #EAEAEA;
+  --secondary-text-color: #00000080;
+  --selection-text-color: #E00000;
+  --footer-background-color: #0D0D0D;
+  --footer-background-icon-color: #ffffff;
+  --footer-text-color: #ffffff;
+  --footer-secondary-text-color: #ffffff80;
+  --footer-border-color: #ffffff;
+}
+
+html[data-theme="dark"] {
+  --main-background-color: #0D0D0D;
+  --main-text-color: #ffffff;
+  --main-button-background-color: #E00000;
+  --main-button-text-color: #ffffff;
+  --main-background-icon-color: #ffffff;
+  --main-border-color: #ffffff;
+  --secondary-background-color: #2A2A2A;
+  --secondary-text-color: #FFFFFF80;
+  --selection-text-color: #E00000;
+  --footer-background-color: #0D0D0D;
+  --footer-background-icon-color: #ffffff;
+  --footer-text-color: #ffffff;
+  --footer-secondary-text-color: #ffffff80;
+  --footer-border-color: #ffffff;
+}

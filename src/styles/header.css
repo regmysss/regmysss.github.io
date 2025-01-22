@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    background-color: var(--main-background-color);
+}
+
+.nav-list {
+    display: flex;
+    color: var(--main-text-color);
+    list-style: none;
+    gap: 20px;
+    font-size: 20px;
+}
