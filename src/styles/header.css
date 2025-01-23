@@ -19,6 +19,10 @@
     font-size: 20px;
 }
 
+.nav-list li {
+    cursor: pointer;
+}
+
 .btn-contact {
     all: unset;
     height: 50px;
@@ -42,6 +46,7 @@
     background-color: var(--secondary-background-color);
     color: var(--main-background-icon-color);
     border-radius: 999px;
+    cursor: pointer;
 }
 
 .header-right {

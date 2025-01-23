@@ -29,7 +29,7 @@ html[data-theme="dark"] {
   --main-background-icon-color: #ffffff;
   --main-border-color: #ffffff;
   --secondary-background-color: #2A2A2A;
-  --secondary-text-color: #FFFFFF80;
+  --secondary-text-color: #ffffff80;
   --selection-text-color: #E00000;
   --footer-background-color: #0D0D0D;
   --footer-background-icon-color: #ffffff;
@@ -37,4 +37,3 @@ html[data-theme="dark"] {
   --footer-secondary-text-color: #ffffff80;
   --footer-border-color: #ffffff;
 }
-
