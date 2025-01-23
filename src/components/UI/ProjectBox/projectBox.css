@@ -1,0 +1,24 @@
+.project-box a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.project-box h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 5px 0 0 0;
+}
+
+.project-box-image-container {
+    width: 380px;
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #00000025;
+}
+
+.project-box-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
