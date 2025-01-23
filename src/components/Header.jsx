@@ -24,7 +24,7 @@ export const Header = ({ theme, setTheme }) => {
                     </button>
                     <button className='btn-theme' onClick={toggleTheme}>
                         {
-                            theme === 'light' ?
+                            theme === 'dark' ?
                                 <IoSunnyOutline className='icon-theme' /> :
                                 <IoMoonOutline className='icon-theme' />
                         }
