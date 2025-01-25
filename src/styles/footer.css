@@ -42,6 +42,7 @@
     align-items: center;
     justify-content: start;
     gap: 20px;
+    list-style: none;
 }
 
 .footer-content hr {
