@@ -4,6 +4,7 @@ import { Home } from "./components/Home";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { About } from "./components/About";
+import { Footer } from "./components/Footer";
 
 function App() {
   const { theme, setTheme } = useTheme();
@@ -15,6 +16,7 @@ function App() {
       <Projects />
       <Skills />
       <About />
+      <Footer />
     </>
   )
 }
