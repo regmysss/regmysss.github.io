@@ -1,0 +1,38 @@
+.skills {
+    background-color: var(--main-background-color);
+    padding: 20px;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.skills-list h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.skills-column ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 24px;
+    color: var(--main-text-color);
+    list-style: none;
+}
+
+.skills-column li {
+    background-color: var(--secondary-background-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+}

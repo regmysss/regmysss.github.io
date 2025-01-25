@@ -7,7 +7,7 @@ export const ProjectBox = ({ title, image, link }) => {
                 <div className="project-box-image-container">
                     <img className="project-box-image" src={image} alt={title} />
                 </div>
-                <h2>{title}</h2>
+                <h3>{title}</h3>
             </a>
         </div>
     );

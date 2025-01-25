@@ -1,6 +1,6 @@
 import { InfoSection } from "./UI/InfoSection/InfoSection";
-import '../styles/projects.css';
 import { ProjectBox } from "./UI/ProjectBox/ProjectBox";
+import '../styles/projects.css';
 
 export const Projects = () => {
 
