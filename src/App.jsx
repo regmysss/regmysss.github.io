@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
+import { About } from "./components/About";
 
 function App() {
   const { theme, setTheme } = useTheme();
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <Projects />
       <Skills />
+      <About />
     </>
   )
 }
