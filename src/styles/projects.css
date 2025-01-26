@@ -4,16 +4,24 @@
 }
 
 .projects-content {
-    display: flex;
-    flex-direction: column;
     max-width: 1400px;
     margin: auto;
 }
 
 .projects-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 40px;
+}
+
+@media (max-width: 1200px) {
+    .projects-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-list {
+        grid-template-columns: 1fr;
+    }
 }
