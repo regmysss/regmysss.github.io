@@ -3,7 +3,7 @@ import '../styles/skills.css';
 
 export const Skills = () => {
     return (
-        <section className="skills">
+        <section id="skills">
             <div className="skills-content">
                 <InfoSection
                     title={"What I Know"}
