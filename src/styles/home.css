@@ -54,12 +54,14 @@
     }
 }
 
-@media (max-height: 576px) {
+@media (max-width: 576px) {
     .home-buttons {
         flex-direction: column;
     }
+}
 
-    .home-content{
+@media (max-height: 576px) {
+    .home-content {
         height: auto;
     }
 }
