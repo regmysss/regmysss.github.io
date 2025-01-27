@@ -68,7 +68,10 @@
 
 .btn-menu {
     all: unset;
-    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
     color: var(--main-text-color);
     cursor: pointer;
 }
