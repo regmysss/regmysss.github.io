@@ -1,5 +1,7 @@
 #home {
+    margin-top: 80px;
     background-color: var(--main-background-color);
+    padding: 20px;
 }
 
 .home-content {
@@ -8,7 +10,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     margin: auto;
     max-width: 1400px;
     gap: 70px;
@@ -52,8 +54,12 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-height: 576px) {
     .home-buttons {
         flex-direction: column;
+    }
+
+    .home-content{
+        height: auto;
     }
 }

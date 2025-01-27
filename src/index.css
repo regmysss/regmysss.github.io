@@ -11,6 +11,7 @@ html[data-theme="light"] {
   --main-button-text-color: #ffffff;
   --main-background-icon-color: #000000;
   --main-border-color: #000000;
+  --main-shadow-color: rgba(0, 0, 0, 0.1);
   --secondary-background-color: #EAEAEA;
   --secondary-text-color: #00000080;
   --selection-text-color: #E00000;
@@ -28,6 +29,7 @@ html[data-theme="dark"] {
   --main-button-text-color: #ffffff;
   --main-background-icon-color: #ffffff;
   --main-border-color: #ffffff;
+  --main-shadow-color: rgba(255, 255, 255, 0.1);
   --secondary-background-color: #2A2A2A;
   --secondary-text-color: #ffffff80;
   --selection-text-color: #E00000;
