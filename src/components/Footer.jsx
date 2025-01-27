@@ -1,5 +1,6 @@
 import { Social } from './UI/Social/Social';
-import { FaGithub, FaInstagram, FaTelegramPlane } from "react-icons/fa";
+import { FiGithub, FiInstagram } from "react-icons/fi";
+import { LiaTelegram } from "react-icons/lia";
 import '../styles/footer.css';
 
 export const Footer = () => {
@@ -14,9 +15,9 @@ export const Footer = () => {
                     <div className='footer-socials'>
                         <h2>Social</h2>
                         <ul>
-                            <Social link={"https://github.com/regmysss"}><FaGithub /></Social>
-                            <Social link={"https://www.instagram.com/vlados.yrm/"}><FaInstagram /></Social>
-                            <Social link={"https://t.me/regmysss"}><FaTelegramPlane /></Social>
+                            <Social link={"https://github.com/regmysss"}><FiGithub /></Social>
+                            <Social link={"https://www.instagram.com/vlados.yrm/"}><FiInstagram /></Social>
+                            <Social link={"https://t.me/regmysss"}><LiaTelegram /></Social>
                         </ul>
                     </div>
                 </div>
