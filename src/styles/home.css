@@ -25,7 +25,13 @@
     color: var(--main-text-color);
 }
 
-.btn-projects {
+.home-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-projects,
+.btn-contact-home {
     all: unset;
     padding: 15px 30px;
     background-color: var(--main-button-background-color);
@@ -38,4 +44,16 @@
 
 .selection {
     color: var(--selection-text-color);
+}
+
+@media (min-width: 768px) {
+    .btn-contact-home {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-buttons {
+        flex-direction: column;
+    }
 }
