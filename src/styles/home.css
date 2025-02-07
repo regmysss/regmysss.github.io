@@ -1,6 +1,5 @@
 #home {
     background-color: var(--main-background-color);
-    margin-top: 80px;
     padding: 20px;
     scroll-margin-top: 80px;
 }
