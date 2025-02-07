@@ -15,7 +15,7 @@
 
 .project-box-image {
     width: 100%;
-    height: 35vh;
+    aspect-ratio: 4/3;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px #00000025;
@@ -25,28 +25,4 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-@media (max-width: 1200px) {
-    .project-box-image {
-        height: 340px;
-    }
-}
-
-@media (max-width: 992px) {
-    .project-box-image {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .project-box-image {
-        height: 230px;
-    }
-}
-
-@media (max-width: 576px) {
-    .project-box-image {
-        height: 340px;
-    }
 }
