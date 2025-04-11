@@ -5,7 +5,7 @@ import { ContactModal } from './ContactModal';
 
 export const Header = ({ theme, setTheme }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isContactModalOpen, setIsContactModalOpen] = useState(true);
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
