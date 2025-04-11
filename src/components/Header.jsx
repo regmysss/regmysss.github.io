@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import '../styles/header.css';
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
+import { ContactModal } from './ContactModal';
 
 export const Header = ({ theme, setTheme }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isContactModalOpen, setIsContactModalOpen] = useState(true);
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
@@ -12,6 +14,10 @@ export const Header = ({ theme, setTheme }) => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const onClose = () => {
+        setIsContactModalOpen(false);
+    }
 
     return (
         <header id='header'>
@@ -25,7 +31,7 @@ export const Header = ({ theme, setTheme }) => {
                     </ul>
                 </nav>
                 <div className='header-btns'>
-                    <button className='btn-contact'>
+                    <button className='btn-contact' onClick={() => setIsContactModalOpen(true)}>
                         Contact
                     </button>
                     <button className='btn-theme' onClick={toggleTheme}>
@@ -59,6 +65,10 @@ export const Header = ({ theme, setTheme }) => {
                     }
                 </div>
             </div>
+            {
+                isContactModalOpen &&
+                <ContactModal onClose={onClose} />
+            }
         </header>
     )
 };
