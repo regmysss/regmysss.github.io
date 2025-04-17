@@ -5,7 +5,6 @@ import { FiGithub, FiInstagram } from "react-icons/fi";
 import { LiaTelegram } from "react-icons/lia";
 import { RiDiscordLine } from "react-icons/ri";
 
-
 export const ContactModal = ({ onClose }) => {
 
   const handleClose = (e) => {
