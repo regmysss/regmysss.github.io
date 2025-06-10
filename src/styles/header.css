@@ -22,7 +22,7 @@
     color: var(--main-text-color);
     list-style: none;
     gap: 20px;
-    font-size: 20px;
+    font-size: var(--medium-font-size);
 }
 
 .nav-list li {
@@ -42,7 +42,7 @@
     padding: 0 25px;
     background-color: var(--main-button-background-color);
     color: var(--main-button-text-color);
-    font-size: 20px;
+    font-size: var(--medium-font-size);
     font-weight: 500;
     border-radius: 999px;
     cursor: pointer;

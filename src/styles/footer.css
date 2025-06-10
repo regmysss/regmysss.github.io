@@ -23,13 +23,13 @@
 
 .footer-about h2,
 .footer-socials h2 {
-    font-size: 36px;
+    font-size: var(--large-font-size);
     color: var(--footer-text-color);
     margin-bottom: 10px;
 }
 
 .footer-about p {
-    font-size: 24px;
+    font-size: var(--medium-font-size);
     color: var(--footer-secondary-text-color);
 }
 
@@ -53,7 +53,7 @@
 
 .footer-copyright-text {
     text-align: center;
-    font-size: 16px;
+    font-size: var(--small-font-size);
     color: var(--footer-text-color);
 }
 

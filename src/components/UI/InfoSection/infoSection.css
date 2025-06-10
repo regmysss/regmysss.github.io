@@ -9,13 +9,13 @@
 
 .info-section-title {
     padding: 0 10px;
-    font-size: 36px;
+    font-size: var(--large-font-size);
     font-weight: bold;
     color: var(--main-text-color);
 }
 
 .info-section-text {
-    font-size: 24px;
+    font-size: var(--medium-font-size);
     color: var(--secondary-text-color);
     width: 80%;
 }

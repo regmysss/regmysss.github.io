@@ -17,13 +17,13 @@
 }
 
 .home-title {
-    font-size: 36px;
+    font-size: var(--large-font-size);
     font-weight: bold;
     color: var(--main-text-color);
 }
 
 .home-subtitle {
-    font-size: 24px;
+    font-size: var(--medium-font-size);
     color: var(--main-text-color);
 }
 
@@ -38,7 +38,7 @@
     padding: 15px 30px;
     background-color: var(--main-button-background-color);
     color: var(--main-button-text-color);
-    font-size: 24px;
+    font-size: var(--medium-font-size);
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
