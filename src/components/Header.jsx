@@ -53,10 +53,10 @@ export const Header = ({ theme, setTheme }) => {
                         isMenuOpen &&
                         <nav className='nav-mobile'>
                             <ul className='nav-list'>
-                                <li onClick={toggleMenu}><a href="#home">Home</a></li>
-                                <li onClick={toggleMenu}><a href="#projects">Projects</a></li>
-                                <li onClick={toggleMenu}><a href="#skills">Skills</a></li>
-                                <li onClick={toggleMenu}><a href="#about">About</a></li>
+                                <li onClick={toggleMenu}><a href="#home"><FiHome />Home</a></li>
+                                <li onClick={toggleMenu}><a href="#projects"><FiTv />Projects</a></li>
+                                <li onClick={toggleMenu}><a href="#skills"><FiLayers />Skills</a></li>
+                                <li onClick={toggleMenu}><a href="#about"><FiUser />About</a></li>
                             </ul>
                         </nav>
                     }
