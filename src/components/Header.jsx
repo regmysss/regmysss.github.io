@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import '../styles/header.css';
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 import { ModalContext } from '../context/ModalContext';
+import { FiHome, FiTv, FiLayers, FiUser } from "react-icons/fi";
 
 export const Header = ({ theme, setTheme }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,10 +21,10 @@ export const Header = ({ theme, setTheme }) => {
             <div className='header-content'>
                 <nav className='nav'>
                     <ul className='nav-list'>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#home"><FiHome />Home</a></li>
+                        <li><a href="#projects"><FiTv />Projects</a></li>
+                        <li><a href="#skills"><FiLayers />Skills</a></li>
+                        <li><a href="#about"><FiUser />About</a></li>
                     </ul>
                 </nav>
                 <div className='header-btns'>

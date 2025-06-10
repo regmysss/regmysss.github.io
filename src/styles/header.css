@@ -30,6 +30,10 @@
 }
 
 .nav-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     color: var(--main-text-color);
     text-decoration: none;
     width: 100%;
