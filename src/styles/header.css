@@ -54,13 +54,12 @@
 
 .btn-contact {
     all: unset;
-    height: 50px;
-    padding: 0 25px;
+    padding: 0px 25px;
     background-color: var(--main-button-background-color);
     color: var(--main-button-text-color);
     font-size: var(--medium-font-size);
-    font-weight: 500;
-    border-radius: 999px;
+    font-weight: bold;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -69,12 +68,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 50px;
+    padding: 10px 10px;
     font-size: 30px;
     background-color: var(--secondary-background-color);
     color: var(--main-background-icon-color);
-    border-radius: 999px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
