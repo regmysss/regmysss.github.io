@@ -1,7 +1,13 @@
+import { useRef } from "react";
 import { InfoSection } from "./UI/InfoSection/InfoSection";
+import { motion, useInView } from "framer-motion";
+import { skills } from "../data/skills";
 import '../styles/skills.css';
 
 export const Skills = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { margin: "-80px 0px", once: true });
+
     return (
         <section id="skills">
             <div className="skills-content">
@@ -10,44 +16,29 @@ export const Skills = () => {
                     description={"Here are the technologies and tools I use to create efficient and user-friendly solutions."}
                 />
                 <div className="skills-list">
-                    <div className="skills-column">
-                        <h3>Frontend Development</h3>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>TypeScript</li>
-                            <li>Tailwindcss</li>
-                        </ul>
-                    </div>
-                    <div className="skills-column">
-                        <h3>Backend Development</h3>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>Express</li>
-                            <li>Hono</li>
-                            <li>C#</li>
-                            <li>PostgreSQL</li>
-                            <li>MongoDB</li>
-                        </ul>
-                    </div>
-                    <div className="skills-column">
-                        <h3>Mobile Development</h3>
-                        <ul>
-                            <li>Flutter</li>
-                            <li>Dart</li>
-                        </ul>
-                    </div>
-                    <div className="skills-column">
-                        <h3>Other Skills</h3>
-                        <ul>
-                            <li>REST API</li>
-                            <li>Git</li>
-                            <li>Kanban</li>
-                            <li>Docker</li>
-                        </ul>
-                    </div>
+                    {
+                        skills.map((category, index) => (
+                            <div key={index} className="skills-column">
+                                <div                            >
+                                    <h3>{category.category}</h3>
+                                    <ul                                    >
+                                        {category.skills.map((item, idx) => (
+                                            <motion.li
+                                                key={idx}
+                                                initial={{ opacity: 0, x: 100 }}
+                                                whileInView={isInView ? { opacity: 1, x: 0 } : {}}
+                                                transition={{ duration: 0.5, delay: idx * 0.2 }}
+                                                viewport={{ once: true }}
+                                                ref={ref}
+                                            >
+                                                {item}
+                                            </motion.li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </section>

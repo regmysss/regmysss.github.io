@@ -5,6 +5,7 @@
     left: 0;
     width: 100%;
     box-shadow: 0 4px 10px var(--main-shadow-color);
+    z-index: 999;
 }
 
 .header-content {
