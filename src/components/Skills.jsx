@@ -1,13 +1,9 @@
-import { useRef } from "react";
 import { InfoSection } from "./UI/InfoSection/InfoSection";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { skills } from "../data/skills";
 import '../styles/skills.css';
 
 export const Skills = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { margin: "-80px 0px", once: true });
-
     return (
         <section id="skills">
             <div className="skills-content">
@@ -26,10 +22,9 @@ export const Skills = () => {
                                             <motion.li
                                                 key={idx}
                                                 initial={{ opacity: 0, x: 100 }}
-                                                whileInView={isInView ? { opacity: 1, x: 0 } : {}}
+                                                whileInView={ { opacity: 1, x: 0 }}
                                                 transition={{ duration: 0.5, delay: idx * 0.2 }}
                                                 viewport={{ once: true }}
-                                                ref={ref}
                                             >
                                                 {item}
                                             </motion.li>
