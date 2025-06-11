@@ -4,7 +4,6 @@ import { projects } from "../data/projects";
 import '../styles/projects.css';
 
 export const Projects = () => {
-
     return (
         <section id="projects">
             <div className="projects-content">
