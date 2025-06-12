@@ -1,9 +1,7 @@
 import { IoMdClose } from "react-icons/io";
-import '../styles/contactmodal.css';
 import { Social } from "./UI/Social/Social";
-import { FiGithub, FiInstagram } from "react-icons/fi";
-import { LiaTelegram } from "react-icons/lia";
-import { RiDiscordLine } from "react-icons/ri";
+import { socials } from "../data/socials";
+import '../styles/contactmodal.css';
 
 export const ContactModal = ({ onClose }) => {
 
@@ -35,10 +33,13 @@ export const ContactModal = ({ onClose }) => {
           </div>
           <div className="contact-socials">
             <ul>
-              <Social link={"https://github.com/regmysss"}><FiGithub /></Social>
-              <Social link={"https://www.instagram.com/vlados.yrm/"}><FiInstagram /></Social>
-              <Social link={"https://t.me/regmysss"}><LiaTelegram /></Social>
-              <Social link={"https://discord.gg/7MU6fszf"}><RiDiscordLine /></Social>
+              {
+                socials.map((social, index) => (
+                  <Social key={index} link={social.link} aminationDelay={index * 0.2}>
+                    <social.icon />
+                  </Social>
+                ))
+              }
             </ul>
           </div>
         </div>
