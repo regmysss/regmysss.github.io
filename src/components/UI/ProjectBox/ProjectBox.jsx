@@ -4,7 +4,6 @@ import './projectBox.css';
 export const ProjectBox = ({ title, image, link }) => {
     function getAnimationDelay(min, max) {
         const randomDelay = Math.random() * (max - min) + min;
-        console.log("🚀 ~ getAnimationDelay ~ randomDelay:", randomDelay.toFixed(1))
         return randomDelay.toFixed(1);
     }
 

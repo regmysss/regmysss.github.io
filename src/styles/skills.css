@@ -4,6 +4,10 @@
     scroll-margin-top: 80px;
 }
 
+.skills-wrapper {
+    overflow-x: hidden;
+}
+
 .skills-content {
     display: flex;
     flex-direction: column;

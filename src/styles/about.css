@@ -4,6 +4,10 @@
     scroll-margin-top: 80px;
 }
 
+.about-wrapper {
+    overflow-x: hidden;
+}
+
 .about-content {
     display: flex;
     flex-direction: column;
@@ -45,11 +49,11 @@
         gap: 20px;
     }
 
-    .about-text{
+    .about-text {
         width: 100%;
     }
 
-    .about-photo  {
+    .about-photo {
         width: 100%;
         aspect-ratio: 1/1;
     }
