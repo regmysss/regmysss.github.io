@@ -1,67 +1,110 @@
-import { useContext, useState } from 'react';
-import '../styles/header.css';
+import { useContext, useEffect, useState } from 'react';
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 import { ModalContext } from '../context/ModalContext';
-import { FiHome, FiTv, FiLayers, FiUser } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion";
+import { menuItems } from '../data/menu';
+import '../styles/header.css';
 
 export const Header = ({ theme, setTheme }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
     const { setIsModalOpen } = useContext(ModalContext);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 640)
+                setIsMenuOpen(false);
+            else
+                setIsMenuOpen(true);
+
+            setCurrentWidth(window.innerWidth);
+        }
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
     };
 
     const toggleMenu = () => {
+        if (currentWidth >= 640) return;
+
         setIsMenuOpen(!isMenuOpen);
     };
 
     return (
         <header id='header'>
-            <div className='header-content'>
-                <nav className='nav'>
-                    <ul className='nav-list'>
-                        <li><a href="."><FiHome />Home</a></li>
-                        <li><a href="#projects"><FiTv />Projects</a></li>
-                        <li><a href="#skills"><FiLayers />Skills</a></li>
-                        <li><a href="#about"><FiUser />About</a></li>
-                    </ul>
-                </nav>
-                <div className='header-btns'>
-                    <button className='btn-contact' onClick={() => setIsModalOpen(true)}>
-                        Contact
-                    </button>
-                    <button className='btn-theme' onClick={toggleTheme}>
-                        {
-                            theme === 'dark' ?
-                                <FiSun className='icon-theme' /> :
-                                <FiMoon className='icon-theme' />
-                        }
-                    </button>
-                </div>
-                <div className='header-mobile'>
-                    <button
-                        className='btn-menu'
-                        onClick={toggleMenu}>
-                        {
-                            isMenuOpen ?
-                                <FiX /> :
-                                <FiMenu />
-                        }
-                    </button>
+            <div className='header-wrapper'>
+                <div className='header-content'>
                     {
-                        isMenuOpen &&
-                        <nav className='nav-mobile'>
-                            <ul className='nav-list'>
-                                <li onClick={toggleMenu}><a href="#home"><FiHome />Home</a></li>
-                                <li onClick={toggleMenu}><a href="#projects"><FiTv />Projects</a></li>
-                                <li onClick={toggleMenu}><a href="#skills"><FiLayers />Skills</a></li>
-                                <li onClick={toggleMenu}><a href="#about"><FiUser />About</a></li>
-                            </ul>
-                        </nav>
+                        currentWidth >= 640 ?
+                            (
+                                <nav className='nav'>
+                                    <ul className='nav-list'>
+                                        {
+                                            menuItems.map((item, index) => (
+                                                <li
+                                                    key={index}
+                                                    onClick={toggleMenu}
+                                                >
+                                                    <a href={item.href}><item.icon />{item.label}</a>
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
+                                </nav>
+                            )
+                            :
+                            (
+                                <AnimatePresence>
+                                    {
+                                        isMenuOpen &&
+                                        <motion.nav
+                                            initial={{ height: 0 }}
+                                            animate={{ height: 'auto' }}
+                                            exit={{ height: 0 }}
+                                            transition={{ duration: 0.4 }}
+                                            className='nav'
+                                        >
+                                            <ul className='nav-list'>
+                                                {
+                                                    menuItems.map((item, index) => (
+                                                        <motion.li
+                                                            key={index}
+                                                            initial={{ opacity: 0, x: 100 }}
+                                                            animate={{ opacity: 1, x: 0 }}
+                                                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                                                            onClick={toggleMenu}
+                                                        >
+                                                            <a href={item.href}><item.icon />{item.label}</a>
+                                                        </motion.li>
+                                                    ))
+                                                }
+                                            </ul>
+                                        </motion.nav>
+                                    }
+                                </AnimatePresence>
+                            )
                     }
+                    <div className='header-buttons'>
+                        <button className='btn-contact' onClick={() => setIsModalOpen(true)}>
+                            Contact
+                        </button>
+                        <button className='btn-theme' onClick={toggleTheme}>
+                            {theme === 'light' ? <FiSun /> : <FiMoon />}
+                        </button>
+                        <button className='btn-menu' onClick={toggleMenu}>
+                            {isMenuOpen ? <FiX /> : <FiMenu />}
+                        </button>
+                    </div>
                 </div>
             </div>
-        </header>
+        </header >
     )
 };

@@ -4,7 +4,11 @@
   font-family: "Poppins", serif;
 }
 
-:root{
+body {
+  margin-top: 80px;
+}
+
+:root {
   --small-font-size: 16px;
   --medium-font-size: 22px;
   --large-font-size: 34px;
