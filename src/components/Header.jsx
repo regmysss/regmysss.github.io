@@ -21,7 +21,7 @@ export const Header = ({ theme, setTheme }) => {
             <div className='header-content'>
                 <nav className='nav'>
                     <ul className='nav-list'>
-                        <li><a href="#home"><FiHome />Home</a></li>
+                        <li><a href="."><FiHome />Home</a></li>
                         <li><a href="#projects"><FiTv />Projects</a></li>
                         <li><a href="#skills"><FiLayers />Skills</a></li>
                         <li><a href="#about"><FiUser />About</a></li>
