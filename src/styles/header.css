@@ -44,10 +44,6 @@
     transition: width 0.5s ease;
 }
 
-.nav-list li:hover::after {
-    width: 100%;
-}
-
 .nav-list a {
     display: flex;
     align-items: center;
@@ -98,6 +94,12 @@
 
 .hide {
     display: none;
+}
+
+@media (hover :hover) {
+    .nav-list li:hover::after {
+        width: 100%;
+    }
 }
 
 @media (min-width: 576px) {
