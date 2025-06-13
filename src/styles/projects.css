@@ -1,8 +1,12 @@
 #projects {
     position: relative;
     background-color: var(--secondary-background-color);
-    padding: 40px 20px;
     scroll-margin-top: 80px;
+}
+
+.projects-wrapper {
+    padding: 40px 20px;
+    overflow-x: hidden;
 }
 
 .projects-content {

@@ -59,7 +59,6 @@
     gap: 20px;
 }
 
-.btn-contact,
 .btn-menu,
 .btn-theme {
     all: unset;
@@ -72,14 +71,6 @@
     border-radius: 10px;
 }
 
-.btn-contact {
-    background-color: var(--main-button-background-color);
-    color: var(--main-button-text-color);
-    font-size: var(--medium-font-size);
-    font-weight: bold;
-    padding: 0 15px;
-}
-
 .btn-theme {
     background-color: var(--secondary-background-color);
     color: var(--main-background-icon-color);
@@ -88,7 +79,8 @@
     overflow: hidden;
 }
 
-.btn-theme .icon {
+.btn-theme .icon,
+.btn-menu .icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,12 +104,6 @@
 }
 
 @media (max-width: 778px) {
-    .btn-contact {
-        display: none;
-    }
-}
-
-@media (max-width: 640px) {
     .header-content {
         flex-direction: column-reverse;
         align-items: center;

@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
-import { ModalContext } from '../context/ModalContext';
 import { motion, AnimatePresence } from "framer-motion";
 import { menuItems } from '../data/menu';
 import '../styles/header.css';
@@ -8,7 +7,6 @@ import '../styles/header.css';
 export const Header = ({ theme, setTheme }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
-    const { setIsModalOpen } = useContext(ModalContext);
 
     useEffect(() => {
         const handleResize = () => {
@@ -28,7 +26,7 @@ export const Header = ({ theme, setTheme }) => {
     };
 
     const toggleMenu = () => {
-        if (currentWidth >= 640) return;
+        if (currentWidth >= 778) return;
 
         setIsMenuOpen(!isMenuOpen);
     };
@@ -38,7 +36,7 @@ export const Header = ({ theme, setTheme }) => {
             <div className='header-wrapper'>
                 <div className='header-content'>
                     {
-                        currentWidth >= 640 ?
+                        currentWidth >= 778 ?
                             (
                                 <nav className='nav'>
                                     <ul className='nav-list'>
@@ -88,9 +86,6 @@ export const Header = ({ theme, setTheme }) => {
                             )
                     }
                     <div className='header-buttons'>
-                        <button className='btn-contact' onClick={() => setIsModalOpen(true)}>
-                            Contact
-                        </button>
                         <button className='btn-theme' onClick={toggleTheme}>
                             <AnimatePresence mode='wait' initial={false}>
                                 {
@@ -119,7 +114,37 @@ export const Header = ({ theme, setTheme }) => {
                             </AnimatePresence>
                         </button>
                         <button className='btn-menu' onClick={toggleMenu}>
-                            {isMenuOpen ? <FiX /> : <FiMenu />}
+                            <AnimatePresence mode='wait' initial={false}>
+                                {
+                                    isMenuOpen
+                                        ?
+                                        (
+                                            <motion.span
+                                                key={'Close'}
+                                                initial={{ scale: 0.5, opacity: 0 }}
+                                                animate={{ scale: 1, opacity: 1 }}
+                                                exit={{ scale: 0.5, opacity: 0 }}
+                                                transition={{ duration: 0.2 }}
+                                                className='icon'
+                                            >
+                                                <FiX />
+                                            </motion.span>
+                                        )
+                                        :
+                                        (
+                                            <motion.span
+                                                key={'Menu'}
+                                                initial={{ scale: 0.5, opacity: 0 }}
+                                                animate={{ scale: 1, opacity: 1 }}
+                                                exit={{ scale: 0.5, opacity: 0 }}
+                                                transition={{ duration: 0.2 }}
+                                                className='icon'
+                                            >
+                                                <FiMenu />
+                                            </motion.span>
+                                        )
+                                }
+                            </AnimatePresence>
                         </button>
                     </div>
                 </div>

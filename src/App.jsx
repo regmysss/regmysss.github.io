@@ -5,13 +5,10 @@ import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
-import { ModalContext } from "./context/ModalContext";
-import { useContext } from "react";
-import { ContactModal } from "./components/ContactModal";
+import { Contact } from "./components/Contact";
 
 function App() {
   const { theme, setTheme } = useTheme();
-  const { isModalOpen, onClose } = useContext(ModalContext);
 
   return (
     <>
@@ -20,8 +17,8 @@ function App() {
       <Projects />
       <Skills />
       <About />
+      <Contact />
       <Footer />
-      {isModalOpen && <ContactModal onClose={onClose} />}
     </>
   )
 }

@@ -1,11 +1,7 @@
-import { useContext } from 'react';
-import { ModalContext } from '../context/ModalContext';
 import { motion } from 'framer-motion';
 import '../styles/home.css';
 
 export const Home = () => {
-    const { setIsModalOpen } = useContext(ModalContext);
-
     return (
         <main>
             <section id='home'>
@@ -30,20 +26,16 @@ export const Home = () => {
                             I specialize in creating <span className='selection'>responsive </span>
                             and <span className='selection'>functional</span> websites to help businesses achieve <span>success</span>.
                         </motion.p>
-                        <motion.div
+                        <motion.a
                             initial={{ opacity: 0, y: -40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             viewport={{ once: true }}
-                            className='home-buttons'
+                            href='#projects'
+                            className='btn-projects'
                         >
-                            <a href='#projects' className='btn-projects'>Projects</a>
-                            <button
-                                onClick={() => setIsModalOpen(true)}
-                                className='btn-contact-home'
-                            >Contact
-                            </button>
-                        </motion.div>
+                            Projects
+                        </motion.a>
                     </div>
                 </div>
             </section>
