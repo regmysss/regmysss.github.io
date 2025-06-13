@@ -13,7 +13,7 @@ export const Footer = () => {
                     <ul className='footer-socials-list'>
                         {
                             socials.map((social, index) => (
-                                <Social key={index} link={social.link} aminationDelay={index * 0.2}>
+                                <Social key={index} link={social.link}>
                                     <social.icon />
                                 </Social>
                             ))

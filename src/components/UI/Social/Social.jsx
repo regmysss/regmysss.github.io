@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import './social.css'
 
-export const Social = ({ children, link, aminationDelay, typeSocial = 'compactSize' }) => {
+export const Social = ({ children, link, animationDelay, typeSocial = 'compactSize' }) => {
     if (typeSocial === 'compactSize')
         return (
             <li className='compactSize'>
@@ -15,7 +15,7 @@ export const Social = ({ children, link, aminationDelay, typeSocial = 'compactSi
         <motion.a
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: aminationDelay }}
+            transition={{ duration: 0.5, delay: animationDelay }}
             viewport={{ once: true }}
             href={link} target='_blank' rel='noopener noreferrer'
             className='fullSize'

@@ -17,6 +17,7 @@ export const Projects = () => {
                                     title={project.title}
                                     image={project.image}
                                     link={project.link}
+                                    animationDelay={index * 0.1}
                                 />
                             ))
                         }

@@ -51,3 +51,9 @@ html[data-theme="dark"] {
   --footer-border-color: #ffffff;
   --modal-background-color: #1A1A1A;
 }
+
+@media (hover: none) {
+  a:hover {
+    background: transparent;
+  }
+}
