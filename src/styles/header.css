@@ -85,15 +85,18 @@
     color: var(--main-background-icon-color);
     font-size: 30px;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn-theme .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-menu {
     color: var(--main-text-color);
     font-size: 40px;
-}
-
-.hide {
-    display: none;
 }
 
 @media (hover: hover) and (pointer: fine) {

@@ -1,7 +1,11 @@
 #home {
     background-color: var(--main-background-color);
-    padding: 20px;
+    padding: 0 20px;
     scroll-margin-top: 80px;
+}
+
+.home-wrapper {
+    overflow-x: hidden;
 }
 
 .home-content {
@@ -14,6 +18,7 @@
     margin: auto;
     max-width: 1400px;
     gap: 70px;
+    padding: 40px 0;
 }
 
 .home-title {

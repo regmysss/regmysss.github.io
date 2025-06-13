@@ -12,11 +12,6 @@ export const Header = ({ theme, setTheme }) => {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 640)
-                setIsMenuOpen(false);
-            else
-                setIsMenuOpen(true);
-
             setCurrentWidth(window.innerWidth);
         }
 
@@ -97,7 +92,31 @@ export const Header = ({ theme, setTheme }) => {
                             Contact
                         </button>
                         <button className='btn-theme' onClick={toggleTheme}>
-                            {theme === 'light' ? <FiSun /> : <FiMoon />}
+                            <AnimatePresence mode='wait' initial={false}>
+                                {
+                                    theme === 'light'
+                                        ? (<motion.span
+                                            key={'Moon'}
+                                            initial={{ scale: 0.5, opacity: 0 }}
+                                            animate={{ scale: 1, opacity: 1 }}
+                                            exit={{ scale: 0.5, opacity: 0 }}
+                                            transition={{ duration: 0.2 }}
+                                            className='icon'
+                                        >
+                                            <FiMoon />
+                                        </motion.span>)
+                                        : (<motion.span
+                                            key={'Sun'}
+                                            initial={{ scale: 0.5, opacity: 0 }}
+                                            animate={{ scale: 1, opacity: 1 }}
+                                            exit={{ scale: 0.5, opacity: 0 }}
+                                            transition={{ duration: 0.2 }}
+                                            className='icon'
+                                        >
+                                            <FiSun />
+                                        </motion.span>)
+                                }
+                            </AnimatePresence>
                         </button>
                         <button className='btn-menu' onClick={toggleMenu}>
                             {isMenuOpen ? <FiX /> : <FiMenu />}

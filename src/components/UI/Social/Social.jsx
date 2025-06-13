@@ -10,7 +10,7 @@ export const Social = ({ children, link, aminationDelay }) => {
             viewport={{ once: true }}
             className='social'
         >
-            <a href={link} >
+            <a href={link} target='_blank' rel='noopener noreferrer'>
                 {children}
             </a>
         </motion.li>
