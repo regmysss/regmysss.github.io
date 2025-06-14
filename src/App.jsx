@@ -8,11 +8,11 @@ import { Footer } from "./components/Footer";
 import { Contact } from "./components/Contact";
 
 function App() {
-  const { theme, setTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <>
-      <Header theme={theme} setTheme={setTheme} />
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <Home />
       <Projects />
       <Skills />

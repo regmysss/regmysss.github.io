@@ -4,15 +4,25 @@ import { useState } from "react";
 export const useTheme = () => {
     const [theme, setTheme] = useState(null);
 
-    useLayoutEffect(() => {
-        const matchTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    function toggleTheme(newTheme) {
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+    }
 
-        setTheme(matchTheme);
+    useLayoutEffect(() => {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            toggleTheme(storedTheme);
+            return;
+        }
+
+        const matchTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        toggleTheme(matchTheme);
     }, []);
 
     useLayoutEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
     }, [theme]);
 
-    return { theme, setTheme };
+    return { theme, toggleTheme };
 }

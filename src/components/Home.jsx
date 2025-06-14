@@ -29,7 +29,12 @@ export const Home = () => {
                         <motion.a
                             initial={{ opacity: 0, y: -40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{
+                                opacity: { duration: 0.5, delay: 0.4 },
+                                y: { duration: 0.5, delay: 0.4 },
+                                scale: { duration: 0.2 },
+                            }}
                             viewport={{ once: true }}
                             href='#projects'
                             className='btn-projects'

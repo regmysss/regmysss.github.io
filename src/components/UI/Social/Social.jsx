@@ -15,7 +15,16 @@ export const Social = ({ children, link, animationDelay, typeSocial = 'compactSi
         <motion.a
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: animationDelay }}
+            whileHover={{
+                scale: 1.02,
+                rotate: -1
+            }}
+            transition={{
+                opacity: { duration: 0.5, delay: animationDelay },
+                x: { duration: 0.5, delay: animationDelay },
+                scale: { duration: 0.2 },
+                rotate: { duration: 0.2 }
+            }}
             viewport={{ once: true }}
             href={link} target='_blank' rel='noopener noreferrer'
             className='fullSize'

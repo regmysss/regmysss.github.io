@@ -6,8 +6,13 @@ export const ProjectBox = ({ title, image, link, animationDelay }) => {
         <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: animationDelay }}
-            viewport={{ once: true, amount: 0.5 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{
+                opacity: { duration: 0.5, delay: animationDelay },
+                y: { duration: 0.5, delay: animationDelay },
+                scale: { duration: 0.2 }
+            }}
+            viewport={{ once: true, amount: 0.4 }}
             className="project-box"
         >
             <a href={link}>

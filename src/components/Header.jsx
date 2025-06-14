@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { menuItems } from '../data/menu';
 import '../styles/header.css';
 
-export const Header = ({ theme, setTheme }) => {
+export const Header = ({ theme, toggleTheme }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
 
@@ -20,10 +20,6 @@ export const Header = ({ theme, setTheme }) => {
             window.removeEventListener('resize', handleResize);
         }
     }, []);
-
-    const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
-    };
 
     const toggleMenu = () => {
         if (currentWidth >= 778) return;
@@ -86,7 +82,7 @@ export const Header = ({ theme, setTheme }) => {
                             )
                     }
                     <div className='header-buttons'>
-                        <button className='btn-theme' onClick={toggleTheme}>
+                        <button className='btn-theme' onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
                             <AnimatePresence mode='wait' initial={false}>
                                 {
                                     theme === 'light'
