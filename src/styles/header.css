@@ -53,12 +53,7 @@
     color: var(--main-text-color);
 }
 
-.header-buttons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
+.header-buttons,
 .btns-container {
     display: flex;
     align-items: center;
@@ -125,7 +120,7 @@
     }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 975px) {
     .header-content {
         flex-direction: column-reverse;
         align-items: center;

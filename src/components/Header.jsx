@@ -38,7 +38,7 @@ export const Header = () => {
             <div className='header-wrapper'>
                 <div className='header-content'>
                     {
-                        currentWidth >= 860 ?
+                        currentWidth > 975 ?
                             (
                                 <nav className='nav'>
                                     <ul className='nav-list'>
