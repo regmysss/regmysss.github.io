@@ -30,8 +30,8 @@ export const socials = [
     },
     {
         name: "Discord",
-        value: "@regmysss",
-        link: "https://discord.com/users/456494528589856799",
+        value: "https://discord.gg/v3swdbjVq8",
+        link: "https://discord.gg/v3swdbjVq8",
         icon: RiDiscordLine
     }
 ]
