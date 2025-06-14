@@ -16,7 +16,7 @@ export const Contact = () => {
                     <div className="contact-list">
                         {
                             socials.map((social, index) => (
-                                <Social key={index} link={social.link} animationDelay={index * 0.2} typeSocial="fullSize">
+                                <Social key={index} link={social.link} animationDelay={index * 0.1} typeSocial="fullSize">
                                     <div className="contact-item">
                                         <div className="contact-details">
                                             <div className="contact-icon">
