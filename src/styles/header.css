@@ -59,8 +59,16 @@
     gap: 20px;
 }
 
+.btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 .btn-menu,
-.btn-theme {
+.btn-theme,
+.btn-lang {
     all: unset;
     cursor: pointer;
     display: flex;
@@ -71,25 +79,39 @@
     border-radius: 10px;
 }
 
+.btn-lang,
 .btn-theme {
     background-color: var(--secondary-background-color);
     color: var(--main-background-icon-color);
+}
+
+.btn-theme {
     font-size: 30px;
     border-radius: 10px;
     overflow: hidden;
-}
-
-.btn-theme .icon,
-.btn-menu .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .btn-menu {
     color: var(--main-text-color);
     font-size: 40px;
 }
+
+.btn-lang .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.btn-theme .icon,
+.btn-menu .icon,
+.btn-lang .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media (hover: hover) and (pointer: fine) {
     .nav-list li:hover::after {
@@ -103,7 +125,7 @@
     }
 }
 
-@media (max-width: 778px) {
+@media (max-width: 860px) {
     .header-content {
         flex-direction: column-reverse;
         align-items: center;

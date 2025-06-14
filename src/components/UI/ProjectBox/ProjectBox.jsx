@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import './projectBox.css';
 
-export const ProjectBox = ({ title, image, link, animationDelay }) => {
+export const ProjectBox = ({ localizationKey, image, link, animationDelay }) => {
+    const { t } = useTranslation();
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -17,9 +20,9 @@ export const ProjectBox = ({ title, image, link, animationDelay }) => {
         >
             <a href={link}>
                 <div className="project-box-image">
-                    <img src={image} alt={title} />
+                    <img src={image} alt={t(localizationKey)} />
                 </div>
-                <h3>{title}</h3>
+                <h3>{t(localizationKey)}</h3>
             </a>
         </motion.div>
     );

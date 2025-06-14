@@ -2,16 +2,19 @@ import { InfoSection } from "./UI/InfoSection/InfoSection"
 import { socials } from "../data/socials";
 import { Social } from "./UI/Social/Social";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 import '../styles/contact.css';
 
 export const Contact = () => {
+    const { t } = useTranslation();
+
     return (
         <section id="contact">
             <div className="contact-wrapper">
                 <div className="contact-content">
                     <InfoSection
-                        title={"Get in Touch"}
-                        description={"Feel free to reach out for collaborations, inquiries, or just a friendly chat."}
+                        title={t("contactTitle")}
+                        description={t("contactDescription")}
                     />
                     <div className="contact-list">
                         {

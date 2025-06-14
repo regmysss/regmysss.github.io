@@ -1,15 +1,18 @@
 import { InfoSection } from "./UI/InfoSection/InfoSection";
 import { motion } from "framer-motion";
+import { useTranslation, Trans } from 'react-i18next';
 import '../styles/about.css';
 
 export const About = () => {
+    const { t } = useTranslation();
+
     return (
         <section id='about'>
             <div className='about-wrapper'>
                 <div className='about-content'>
                     <InfoSection
-                        title={"Who I Am"}
-                        description={"Here I will tell you a little about myself."}
+                        title={t("aboutTitle")}
+                        description={t("aboutDescription")}
                     />
                     <div className='about-info'>
                         <motion.div
@@ -19,18 +22,14 @@ export const About = () => {
                             viewport={{ once: true }}
                             className='about-text'
                         >
-                            <p >
-                                I’m <b>Vladyslav Yarmolyuk,</b> a <b>passionate web developer</b> from Kyiv, Ukraine,
-                                with over <b>3 years of experience</b> studying and practicing modern web development.
-                                I focus on building <b>responsive, functional, and user-friendly</b> websites that
-                                solve real-world problems.
-                            </p>
-                            <br />
-                            <p >
-                                I’m always excited to explore <b>new technologies</b> and continuously learn to create
-                                better and more <b>innovative IT solutions</b>. My goal is to deliver <b>high-quality digital
-                                    products</b> that not only meet but exceed user expectations.
-                            </p>
+                            <Trans
+                                i18nKey="aboutDetails"
+                                components={{
+                                    paragraph: <p />,
+                                    break: <br />,
+                                    bold: <b />,
+                                }}
+                            />
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 100 }}

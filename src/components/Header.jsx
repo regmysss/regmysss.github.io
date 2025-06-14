@@ -2,11 +2,17 @@ import { useEffect, useState } from 'react';
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import { menuItems } from '../data/menu';
+import { useTranslation } from 'react-i18next';
 import '../styles/header.css';
+import { useTheme } from '../hooks/useTheme';
+import { useLocale } from '../hooks/useLocale';
 
-export const Header = ({ theme, toggleTheme }) => {
+export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
+    const { theme, toggleTheme } = useTheme();
+    const { locale, changeLocale } = useLocale();
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handleResize = () => {
@@ -32,7 +38,7 @@ export const Header = ({ theme, toggleTheme }) => {
             <div className='header-wrapper'>
                 <div className='header-content'>
                     {
-                        currentWidth >= 778 ?
+                        currentWidth >= 860 ?
                             (
                                 <nav className='nav'>
                                     <ul className='nav-list'>
@@ -42,7 +48,7 @@ export const Header = ({ theme, toggleTheme }) => {
                                                     key={index}
                                                     onClick={toggleMenu}
                                                 >
-                                                    <a href={item.href}><item.icon />{item.label}</a>
+                                                    <a href={item.href}><item.icon />{t(item.localizationKey)}</a>
                                                 </li>
                                             ))
                                         }
@@ -71,7 +77,7 @@ export const Header = ({ theme, toggleTheme }) => {
                                                             transition={{ duration: 0.3, delay: index * 0.1 }}
                                                             onClick={toggleMenu}
                                                         >
-                                                            <a href={item.href}><item.icon />{item.label}</a>
+                                                            <a href={item.href}><item.icon />{t(item.localizationKey)}</a>
                                                         </motion.li>
                                                     ))
                                                 }
@@ -82,33 +88,63 @@ export const Header = ({ theme, toggleTheme }) => {
                             )
                     }
                     <div className='header-buttons'>
-                        <button className='btn-theme' onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
-                            <AnimatePresence mode='wait' initial={false}>
+                        <div className='btns-container'>
+
+                            <button className='btn-lang' onClick={() => changeLocale(locale === 'uk' ? 'en' : 'uk')}>
                                 {
-                                    theme === 'light'
-                                        ? (<motion.span
-                                            key={'Moon'}
-                                            initial={{ scale: 0.5, opacity: 0 }}
-                                            animate={{ scale: 1, opacity: 1 }}
-                                            exit={{ scale: 0.5, opacity: 0 }}
-                                            transition={{ duration: 0.2 }}
-                                            className='icon'
-                                        >
-                                            <FiMoon />
-                                        </motion.span>)
-                                        : (<motion.span
-                                            key={'Sun'}
-                                            initial={{ scale: 0.5, opacity: 0 }}
-                                            animate={{ scale: 1, opacity: 1 }}
-                                            exit={{ scale: 0.5, opacity: 0 }}
-                                            transition={{ duration: 0.2 }}
-                                            className='icon'
-                                        >
-                                            <FiSun />
-                                        </motion.span>)
+                                    <AnimatePresence mode='wait' initial={false}>
+                                        {
+                                            locale === 'uk'
+                                                ? (<motion.img
+                                                    key={'Moon'}
+                                                    initial={{ scale: 0.5, opacity: 0 }}
+                                                    animate={{ scale: 1, opacity: 1 }}
+                                                    exit={{ scale: 0.5, opacity: 0 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    src="uk.svg"
+                                                    className='icon'
+                                                />)
+                                                : (<motion.img
+                                                    key={'Sun'}
+                                                    initial={{ scale: 0.5, opacity: 0 }}
+                                                    animate={{ scale: 1, opacity: 1 }}
+                                                    exit={{ scale: 0.5, opacity: 0 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    src="en.svg"
+                                                    className='icon'
+                                                />)
+                                        }
+                                    </AnimatePresence>
                                 }
-                            </AnimatePresence>
-                        </button>
+                            </button>
+                            <button className='btn-theme' onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+                                <AnimatePresence mode='wait' initial={false}>
+                                    {
+                                        theme === 'light'
+                                            ? (<motion.span
+                                                key={'Moon'}
+                                                initial={{ scale: 0.5, opacity: 0 }}
+                                                animate={{ scale: 1, opacity: 1 }}
+                                                exit={{ scale: 0.5, opacity: 0 }}
+                                                transition={{ duration: 0.2 }}
+                                                className='icon'
+                                            >
+                                                <FiMoon />
+                                            </motion.span>)
+                                            : (<motion.span
+                                                key={'Sun'}
+                                                initial={{ scale: 0.5, opacity: 0 }}
+                                                animate={{ scale: 1, opacity: 1 }}
+                                                exit={{ scale: 0.5, opacity: 0 }}
+                                                transition={{ duration: 0.2 }}
+                                                className='icon'
+                                            >
+                                                <FiSun />
+                                            </motion.span>)
+                                    }
+                                </AnimatePresence>
+                            </button>
+                        </div>
                         <button className='btn-menu' onClick={toggleMenu}>
                             <AnimatePresence mode='wait' initial={false}>
                                 {

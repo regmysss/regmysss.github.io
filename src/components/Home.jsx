@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
+import { useTranslation, Trans } from 'react-i18next';
 import '../styles/home.css';
 
 export const Home = () => {
+    const { t } = useTranslation();
+
     return (
         <main>
             <section id='home'>
@@ -14,7 +17,10 @@ export const Home = () => {
                             viewport={{ once: true }}
                             className='home-title'
                         >
-                            Hi, I&#39;m <span className='selection'>Vladyslav</span> - a Web Developer.
+                            <Trans
+                                i18nKey='homeWelcome'
+                                components={{ selection: <span className="selection" /> }}
+                            />
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: -40 }}
@@ -23,8 +29,10 @@ export const Home = () => {
                             viewport={{ once: true }}
                             className='home-subtitle'
                         >
-                            I specialize in creating <span className='selection'>responsive </span>
-                            and <span className='selection'>functional</span> websites to help businesses achieve <span>success</span>.
+                            <Trans
+                                i18nKey='homeWelcomeDescription'
+                                components={{ selection: <span className="selection" /> }}
+                            />
                         </motion.p>
                         <motion.a
                             initial={{ opacity: 0, y: -40 }}
@@ -39,7 +47,7 @@ export const Home = () => {
                             href='#projects'
                             className='btn-projects'
                         >
-                            Projects
+                            {t('homeProjectsBtn')}
                         </motion.a>
                     </div>
                 </div>

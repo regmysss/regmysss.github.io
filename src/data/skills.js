@@ -1,6 +1,6 @@
 export const skills = [
     {
-        category: "Frontend Development",
+        localizationKey: "skillsFrontend",
         skills: [
             "HTML",
             "CSS",
@@ -11,7 +11,7 @@ export const skills = [
         ]
     },
     {
-        category: "Backend Development",
+        localizationKey: "skillsBackend",
         skills: [
             "Node.js",
             "Express",
@@ -22,14 +22,14 @@ export const skills = [
         ]
     },
     {
-        category: "Mobile Development",
+        localizationKey: "skillsMobile",
         skills: [
             "Flutter",
             "Dart"
         ]
     },
     {
-        category: "Other Skills",
+        localizationKey: "skillsOther",
         skills: [
             "REST API",
             "Git",
