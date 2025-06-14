@@ -28,10 +28,10 @@
 
 @media (max-width: 576px) {
     .info-section-text {
-        width: 90%;
+        width: 100%;
     }
 
     .info-section hr {
-        width: 90%;
+        width: 100%;
     }
 }
