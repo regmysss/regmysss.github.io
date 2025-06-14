@@ -4,7 +4,7 @@
 }
 
 .home-wrapper {
-    padding: 0 20px;
+    padding: 40px 20px;
     overflow-x: hidden;
 }
 
@@ -14,11 +14,10 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 160px);
     margin: auto;
     max-width: 1400px;
     gap: 70px;
-    padding: 40px 0;
 }
 
 .home-title {
