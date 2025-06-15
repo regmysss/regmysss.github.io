@@ -1,9 +1,29 @@
 import { FiHome, FiTv, FiLayers, FiUser, FiPhoneCall } from "react-icons/fi";
 
-export const menuItems = [
-    { icon: FiHome, localizationKey: "headerHome", href: "." },
-    { icon: FiTv, localizationKey: "headerProjects", href: "#projects" },
-    { icon: FiLayers, localizationKey: "headerSkills", href: "#skills" },
-    { icon: FiUser, localizationKey: "headerAbout", href: "#about" },
-    { icon: FiPhoneCall, localizationKey: "headerContact", href: "#contact" }
+export const getMenuItems = (t) => [
+    {
+        icon: FiHome,
+        label: t("header.home"),
+        href: "."
+    },
+    {
+        icon: FiTv,
+        label: t("header.projects"),
+        href: "#projects"
+    },
+    {
+        icon: FiLayers,
+        label: t("header.skills"),
+        href: "#skills"
+    },
+    {
+        icon: FiUser,
+        label: t("header.about"),
+        href: "#about"
+    },
+    {
+        icon: FiPhoneCall,
+        label: t("header.contact"),
+        href: "#contact"
+    }
 ];

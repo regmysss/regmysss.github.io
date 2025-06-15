@@ -13,8 +13,8 @@ export const Contact = () => {
             <div className="contact-wrapper">
                 <div className="contact-content">
                     <InfoSection
-                        title={t("contactTitle")}
-                        description={t("contactDescription")}
+                        title={t("contact.title")}
+                        description={t("contact.description")}
                     />
                     <div className="contact-list">
                         {

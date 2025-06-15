@@ -1,6 +1,6 @@
-export const skills = [
+export const getSkills = (t) => [
     {
-        localizationKey: "skillsFrontend",
+        category: t("skills.categories.frontend"),
         skills: [
             "HTML",
             "CSS",
@@ -11,7 +11,7 @@ export const skills = [
         ]
     },
     {
-        localizationKey: "skillsBackend",
+        category: t("skills.categories.backend"),
         skills: [
             "Node.js",
             "Express",
@@ -22,14 +22,14 @@ export const skills = [
         ]
     },
     {
-        localizationKey: "skillsMobile",
+        category: t("skills.categories.mobile"),
         skills: [
             "Flutter",
             "Dart"
         ]
     },
     {
-        localizationKey: "skillsOther",
+        category: t("skills.categories.other"),
         skills: [
             "REST API",
             "Git",

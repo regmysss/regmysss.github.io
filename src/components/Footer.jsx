@@ -11,7 +11,7 @@ export const Footer = () => {
             <div className='footer-wrapper'>
                 <div className='footer-content'>
                     <p className='footer-copyright-text'>
-                        {t('footerCopyright', { date: new Date().getFullYear() })}
+                        {t("footer.copyright", { date: new Date().getFullYear() })}
                     </p>
                     <ul className='footer-socials-list'>
                         {

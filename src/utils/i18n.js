@@ -13,6 +13,7 @@ const getInitialLocale = () => {
     }
 };
 
+
 i18n.use(initReactI18next).init({
     resources: {
         ...enLocale,

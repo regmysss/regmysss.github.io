@@ -1,33 +1,68 @@
 {
     "en": {
         "translation": {
-            "headerHome": "Home",
-            "headerProjects": "Projects",
-            "headerSkills": "Skills",
-            "headerAbout": "About",
-            "headerContact": "Contact",
-            "homeWelcome": "Hi! I'm <selection>Vladyslav</selection> - a Web Developer.",
-            "homeWelcomeDescription": "I specialize in creating <selection>responsive</selection> and <selection>functional</selection> websites to help businesses achieve <selection>success</selection>.",
-            "homeProjectsBtn": "Projects",
-            "projectsTitle": "What I've Built",
-            "projectsDescription": "Here are some of the projects I have worked on that showcase my skills in web and mobile development.",
-            "projectConverterFiles": "Converter Files Tool",
-            "projectDetectingFood": "Detecting Food (AI)",
-            "projectCarPlateRecognition": "Car Plate Recognition (AI)",
-            "projectCurrencyConverter": "Currency Converter",
-            "projectMediaCompressor": "Media Compressor Tool",
-            "skillsTitle": "What I Know",
-            "skillsDescription": "Here are the technologies and tools I use to create efficient and user-friendly solutions.",
-            "skillsFrontend": "Frontend Development",
-            "skillsBackend": "Backend Development",
-            "skillsMobile": "Mobile Development",
-            "skillsOther": "Other Skills",
-            "aboutTitle": "Who I Am",
-            "aboutDescription": "Here I will tell you a little about myself.",
-            "aboutDetails": "<paragraph>  I’m <bold>Vladyslav Yarmolyuk,</bold> a <bold>passionate web developer</bold> from Kyiv, Ukraine, with over <bold>3 years of experience</bold> studying and practicing modern web development. I focus on building <bold>responsive, functional, and user-friendly</bold> websites that solve real- world problems.</paragraph><break /><paragraph> I’m always excited to explore <bold>new technologies</bold> and continuously learn to create better and more <bold>innovative IT solutions</bold>. My goal is to deliver <bold>high-quality digital products</bold> that not only meet but exceed user expectations. </paragraph>",
-            "contactTitle": "Get in Touch",
-            "contactDescription": "Feel free to reach out for collaborations, inquiries, or just a friendly chat.",
-            "footerCopyright": "© {{date}} Vladyslav Yarmolyuk. All rights reserved."
+            "header": {
+                "home": "Home",
+                "projects": "Projects",
+                "skills": "Skills",
+                "about": "About",
+                "contact": "Contact"
+            },
+            "home": {
+                "welcome": "Hi! I'm <selection>Vladyslav</selection> - a Web Developer.",
+                "welcomeDescription": "I specialize in creating <selection>responsive</selection> and <selection>functional</selection> websites to help businesses achieve <selection>success</selection>.",
+                "projectsBtn": "Projects"
+            },
+            "projects": {
+                "title": "What I've Built",
+                "description": "Here are some of the projects I have worked on that showcase my skills in web and mobile development.",
+                "converterFilesTool": {
+                    "title": "Converter Files Tool",
+                    "description": "A web application for converting files to various formats supported by FFmpeg. The user can upload a file and select the desired format for conversion. The system processes the files on the server and returns the finished result."
+                },
+                "detectingFoodAI": {
+                    "title": "Detecting Food (AI)",
+                    "description": "An AI-powered application that identifies food items in images. Users can upload photos, and the system uses machine learning to recognize and classify different types of food, providing nutritional information and suggestions."
+                },
+                "carPlateRecognition": {
+                    "title": "Car Plate Recognition (AI)",
+                    "description": "An AI-based tool that recognizes and extracts information from car license plates in images. It can be used for various applications, including parking management and traffic monitoring."
+                },
+                "currencyConverter": {
+                    "title": "Currency Converter",
+                    "description": "A mobile application that allows users to convert currencies in real-time using the latest exchange rates. It supports multiple currencies and provides a user-friendly interface."
+                },
+                "mediaCompressor": {
+                    "title": "Media Compressor Tool",
+                    "description": "A Windows tool for compressing media files, including images and videos, to reduce their size without significant loss of quality. It supports various formats and provides options for adjusting compression levels."
+                },
+                "climateVisualizationPlatform": {
+                    "title": "Climate Visualization Platform",
+                    "description": "A collaborative project with a team of 2, where we developed a website featuring a map displaying temperature readings from multiple measuring stations, isolines, and the temperature gradient."
+                }
+            },
+            "skills": {
+                "title": "What I Know",
+                "description": "Here are the technologies and tools I use to create efficient and user-friendly solutions.",
+                "categories": {
+                    "frontend": "Frontend Development",
+                    "backend": "Backend Development",
+                    "mobile": "Mobile Development",
+                    "other": "Other Skills"
+                }
+            },
+            "about": {
+                "title": "Who I Am",
+                "description": "Here I will tell you a little about myself.",
+                "details": "<paragraph>I’m <bold>Vladyslav Yarmolyuk,</bold> a <bold>passionate web developer</bold> from Kyiv, Ukraine, with over <bold>3 years of experience</bold> studying and practicing modern web development. I focus on building <bold>responsive, functional, and user-friendly</bold> websites that solve real-world problems.</paragraph><break /><paragraph> I’m always excited to explore <bold>new technologies</bold> and continuously learn to create better and more <bold>innovative IT solutions</bold>. My goal is to deliver <bold>high-quality digital products</bold> that not only meet but exceed user expectations. </paragraph>"
+            },
+            "contact": {
+                "title": "Get in Touch",
+                "description": "Feel free to reach out for collaborations, inquiries, or just a friendly chat."
+            },
+            "footer": {
+                "copyright": "© {{date}} Vladyslav Yarmolyuk. All rights reserved."
+            }
         }
     }
 }

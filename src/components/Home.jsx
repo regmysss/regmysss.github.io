@@ -18,7 +18,7 @@ export const Home = () => {
                             className='home-title'
                         >
                             <Trans
-                                i18nKey='homeWelcome'
+                                i18nKey='home.welcome'
                                 components={{ selection: <span className="selection" /> }}
                             />
                         </motion.h1>
@@ -30,7 +30,7 @@ export const Home = () => {
                             className='home-subtitle'
                         >
                             <Trans
-                                i18nKey='homeWelcomeDescription'
+                                i18nKey='home.welcomeDescription'
                                 components={{ selection: <span className="selection" /> }}
                             />
                         </motion.p>
@@ -47,7 +47,7 @@ export const Home = () => {
                             href='#projects'
                             className='btn-projects'
                         >
-                            {t('homeProjectsBtn')}
+                            {t('home.projectsBtn')}
                         </motion.a>
                     </div>
                 </div>

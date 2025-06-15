@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
-import { menuItems } from '../data/menu';
 import { useTranslation } from 'react-i18next';
-import '../styles/header.css';
 import { useTheme } from '../hooks/useTheme';
 import { useLocale } from '../hooks/useLocale';
+import { getMenuItems } from '../data/menu';
+import '../styles/header.css';
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +13,7 @@ export const Header = () => {
     const { theme, toggleTheme } = useTheme();
     const { locale, changeLocale } = useLocale();
     const { t } = useTranslation();
+    const menuItems = getMenuItems(t);
 
     useEffect(() => {
         const handleResize = () => {
@@ -48,7 +49,7 @@ export const Header = () => {
                                                     key={index}
                                                     onClick={toggleMenu}
                                                 >
-                                                    <a href={item.href}><item.icon />{t(item.localizationKey)}</a>
+                                                    <a href={item.href}><item.icon />{t(item.label)}</a>
                                                 </li>
                                             ))
                                         }
