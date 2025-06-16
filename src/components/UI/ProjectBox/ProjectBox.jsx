@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FiGithub, FiEye } from "react-icons/fi";
-import { MdOutlinePhotoSizeSelectActual } from "react-icons/md";
+// import { MdOutlinePhotoSizeSelectActual } from "react-icons/md";
 import './projectBox.css';
 
 export const ProjectBox = ({ title, description, tecnologes, image, linkGithub, linkDemo, animationDelay }) => {
@@ -35,7 +35,7 @@ export const ProjectBox = ({ title, description, tecnologes, image, linkGithub, 
             </div>
             <div className='project-image'>
                 <div className='project-btns'>
-                    <button><MdOutlinePhotoSizeSelectActual /></button>
+                    {/* <button><MdOutlinePhotoSizeSelectActual /></button> */}
                     {
                         linkGithub &&
                         <a
