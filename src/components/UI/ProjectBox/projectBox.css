@@ -1,26 +1,31 @@
-.projectBox {
+.project-box {
     background-color: var(--main-background-color);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 20px 20px 0 20px;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    padding: 20px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.projectBox h3 {
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.project-info h3 {
     font-size: var(--medium-font-size);
     color: var(--main-text-color);
 }
 
-
-.projectBox p {
+.project-info p {
     font-size: var(--small-font-size);
     color: var(--main-text-color);
 }
 
-.projectBox ul {
+.project-info ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -28,21 +33,29 @@
     gap: 10px;
 }
 
-.projectBox ul li {
+.project-info ul li {
     padding: 10px;
     border-radius: 10px;
     background-color: var(--secondary-background-color);
     color: var(--main-text-color);
 }
 
-.projectImageWrapper {
+.project-image {
     position: relative;
-    height: 150px;
+    height: 250px;
     width: 100%;
 }
 
-.projectImageBtns button,
-.projectImageBtns a {
+.project-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    border-radius: 10px;
+}
+
+.project-btns button,
+.project-btns a {
     all: unset;
     background-color: var(--main-background-color);
     display: flex;
@@ -56,7 +69,7 @@
     cursor: pointer;
 }
 
-.projectImageBtns {
+.project-btns {
     z-index: 1;
     position: absolute;
     bottom: 20px;
@@ -65,11 +78,4 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
-
-.projectImageWrapper img {
-    width: 100%;
-    object-fit: cover;
-    filter: brightness(0.5);
-    border-radius: 10px 10px 0 0;
 }

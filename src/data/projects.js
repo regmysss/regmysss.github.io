@@ -7,11 +7,11 @@ export const getProjects = (t) => [
         linkGithub: "https://github.com/0deans/foodly"
     },
     {
-        title: t("projects.mediaCompressor.title"),
-        description: t("projects.mediaCompressor.description"),
-        tecnologes: ["C#", "FFmpeg", "Windows Forms"],
-        image: "https://i.imgur.com/mrC9Wqy.png",
-        linkGithub: "https://github.com/regmysss/Media-Compressor"
+        title: t("projects.climateVisualizationPlatform.title"),
+        description: t("projects.climateVisualizationPlatform.description"),
+        tecnologes: ["React", "TypeScript", "Leaflet", "OpenStreetMap", "Chart.js", "D3.js"],
+        image: "test.png",
+        linkDemo: "https://climateistu.tech/"
     },
     {
         title: t("projects.carPlateRecognition.title"),
@@ -21,18 +21,18 @@ export const getProjects = (t) => [
         linkGithub: "https://github.com/0deans/Car-Plate-Recognition"
     },
     {
+        title: t("projects.mediaCompressor.title"),
+        description: t("projects.mediaCompressor.description"),
+        tecnologes: ["C#", "FFmpeg", "Windows Forms"],
+        image: "https://i.imgur.com/mrC9Wqy.png",
+        linkGithub: "https://github.com/regmysss/Media-Compressor"
+    },
+    {
         title: t("projects.currencyConverter.title"),
         description: t("projects.currencyConverter.description"),
         tecnologes: ["Flutter", "Dart", "l10n (Localization)", "API"],
         image: "https://i.imgur.com/AglXrZd.png",
         linkGithub: "https://github.com/regmysss/Currency-Converter"
-    },
-    {
-        title: t("projects.climateVisualizationPlatform.title"),
-        description: t("projects.climateVisualizationPlatform.description"),
-        tecnologes: ["React", "TypeScript", "Leaflet", "OpenStreetMap", "Chart.js", "D3.js"],
-        image: "test.png",
-        linkDemo: "https://climateistu.tech/"
     },
     {
         title: t("projects.converterFilesTool.title"),

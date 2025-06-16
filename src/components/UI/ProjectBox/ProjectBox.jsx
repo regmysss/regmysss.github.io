@@ -18,21 +18,23 @@ export const ProjectBox = ({ title, description, tecnologes, image, linkGithub, 
                 scale: { duration: 0.2 }
             }}
             viewport={{ once: true, amount: 0.4 }}
-            className='projectBox'
+            className='project-box'
         >
-            <h3>{t(title)}</h3>
-            <p>{t(description)}</p>
-            <ul>
-                {tecnologes.map((tech, index) => (
-                    <li
-                        key={index}
-                    >
-                        {tech}
-                    </li>
-                ))}
-            </ul>
-            <div className='projectImageWrapper'>
-                <div className='projectImageBtns'>
+            <div className='project-info'>
+                <h3>{t(title)}</h3>
+                <p>{t(description)}</p>
+                <ul>
+                    {tecnologes.map((tech, index) => (
+                        <li
+                            key={index}
+                        >
+                            {tech}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className='project-image'>
+                <div className='project-btns'>
                     <button><MdOutlinePhotoSizeSelectActual /></button>
                     {
                         linkGithub &&
