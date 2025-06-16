@@ -22,14 +22,16 @@ export const About = () => {
                             viewport={{ once: true }}
                             className='about-text'
                         >
-                            <Trans
-                                i18nKey="about.details"
-                                components={{
-                                    paragraph: <p />,
-                                    break: <br />,
-                                    bold: <b />,
-                                }}
-                            />
+                            <p>
+                                <Trans
+                                    i18nKey="about.details"
+                                    components={{
+                                        paragraph: <p />,
+                                        break: <br />,
+                                        bold: <b />,
+                                    }}
+                                />
+                            </p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 100 }}
@@ -38,7 +40,11 @@ export const About = () => {
                             viewport={{ once: true }}
                             className='about-photo'
                         >
-                            <img src="avatar.jpg" alt="photo" />
+                            <img
+                                src="avatar.jpg"
+                                alt="photo"
+                                loading="lazy"
+                            />
                         </motion.div>
                     </div>
                 </div>

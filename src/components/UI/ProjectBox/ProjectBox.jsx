@@ -57,7 +57,11 @@ export const ProjectBox = ({ title, description, tecnologes, image, linkGithub, 
                         </a>
                     }
                 </div>
-                <img src={image} alt={t(title)} />
+                <img
+                    src={image}
+                    alt={t(title)}
+                    loading='lazy'
+                />
             </div>
         </motion.div>
     );
