@@ -1,6 +1,6 @@
 #skills {
-    background-color: var(--main-background-color);
-    scroll-margin-top: 80px;
+    background-color: var(--main-bg-color);
+    scroll-margin-top: 70px;
 }
 
 .skills-wrapper {
@@ -38,7 +38,8 @@
 }
 
 .skills-column li {
-    background-color: var(--secondary-background-color);
+    background-color: var(--main-bg-box);
+    border: var(--main-border);
     padding: 10px 20px;
     border-radius: 10px;
 }

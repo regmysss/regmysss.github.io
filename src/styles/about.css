@@ -1,6 +1,6 @@
 #about {
-    background-color: var(--secondary-background-color);
-    scroll-margin-top: 80px;
+    background-color: var(--secondary-bg-color);
+    scroll-margin-top: 70px;
 }
 
 .about-wrapper {

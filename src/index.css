@@ -7,7 +7,7 @@
 }
 
 body {
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 :root {
@@ -17,39 +17,29 @@ body {
 }
 
 html[data-theme="light"] {
-  --main-background-color: #ffffff;
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #e4e4e6;
+  --main-button-bg-color: #E00000;
   --main-text-color: #000000;
-  --main-button-background-color: #E00000;
-  --main-button-text-color: #ffffff;
-  --main-background-icon-color: #000000;
-  --main-border-color: #000000;
-  --main-shadow-color: rgba(0, 0, 0, 0.1);
-  --secondary-background-color: #EAEAEA;
   --secondary-text-color: #00000080;
   --selection-text-color: #E00000;
-  --footer-background-color: #0D0D0D;
-  --footer-background-icon-color: #ffffff;
-  --footer-text-color: #ffffff;
-  --footer-secondary-text-color: #ffffff80;
-  --footer-border-color: #ffffff;
-  --modal-background-color: #F5F5F5;
+  --main-bg-box: rgba(0, 0, 0, 0.05);
+  --main-border: 1px solid rgba(0, 0, 0, 0.15);
+  --secondary-bg-box: rgba(0, 0, 0, 0.07);
+  --secondary-border: 1px solid rgba(0, 0, 0, 0.2);
+  --hover-bg-color: rgba(0, 0, 0, 0.15);
 }
 
 html[data-theme="dark"] {
-  --main-background-color: #0D0D0D;
+  --main-bg-color: #09090b;
+  --secondary-bg-color: #18181a;
   --main-text-color: #ffffff;
-  --main-button-background-color: #E00000;
-  --main-button-text-color: #ffffff;
-  --main-background-icon-color: #ffffff;
-  --main-border-color: #ffffff;
-  --main-shadow-color: rgba(255, 255, 255, 0.1);
-  --secondary-background-color: #2A2A2A;
+  --main-button-bg-color: #E00000;
   --secondary-text-color: #ffffff80;
   --selection-text-color: #E00000;
-  --footer-background-color: #0D0D0D;
-  --footer-background-icon-color: #ffffff;
-  --footer-text-color: #ffffff;
-  --footer-secondary-text-color: #ffffff80;
-  --footer-border-color: #ffffff;
-  --modal-background-color: #1A1A1A;
+  --main-bg-box: rgba(255, 255, 255, 0.05);
+  --main-border: 1px solid rgba(255, 255, 255, 0.15);
+  --secondary-bg-box: rgba(255, 255, 255, 0.05);
+  --secondary-border: 1px solid rgba(255, 255, 255, 0.15);
+  --hover-bg-color: rgba(255, 255, 255, 0.15);
 }

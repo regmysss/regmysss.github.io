@@ -22,16 +22,14 @@ export const About = () => {
                             viewport={{ once: true }}
                             className='about-text'
                         >
-                            <p>
-                                <Trans
-                                    i18nKey="about.details"
-                                    components={{
-                                        paragraph: <p />,
-                                        break: <br />,
-                                        bold: <b />,
-                                    }}
-                                />
-                            </p>
+                            <Trans
+                                i18nKey="about.details"
+                                components={{
+                                    paragraph: <p />,
+                                    break: <br />,
+                                    bold: <b />,
+                                }}
+                            />
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 100 }}

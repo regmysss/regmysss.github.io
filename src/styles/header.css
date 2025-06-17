@@ -1,11 +1,12 @@
 #header {
-    background-color: var(--main-background-color);
+    background-color: var(--main-bg-color);
     z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 4px 10px var(--main-shadow-color);
+    box-shadow: 0 1px 15px var(--main-shadow-color);
+    color: var(--main-text-color);
 }
 
 .header-wrapper {
@@ -19,12 +20,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 80px;
+    min-height: 70px;
 }
 
 .nav-list {
     display: flex;
-    color: var(--main-text-color);
     list-style: none;
     gap: 40px;
     font-size: var(--medium-font-size);
@@ -69,31 +69,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    min-width: 50px;
+    height: 40px;
+    min-width: 40px;
     border-radius: 10px;
+}
+
+.btn-menu:hover,
+.btn-theme:hover,
+.btn-lang:hover {
+    background-color: var(--hover-bg-color);
+    transition: background-color 0.2s ease;
 }
 
 .btn-lang,
 .btn-theme {
-    background-color: var(--secondary-background-color);
+    background-color: var(--secondary-bg-color);
+    border: var(--secondary-border);
     color: var(--main-background-icon-color);
 }
 
 .btn-theme {
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .btn-menu {
-    color: var(--main-text-color);
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .btn-lang .icon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;

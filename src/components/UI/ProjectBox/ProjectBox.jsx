@@ -4,7 +4,7 @@ import { FiGithub, FiEye } from "react-icons/fi";
 // import { MdOutlinePhotoSizeSelectActual } from "react-icons/md";
 import './projectBox.css';
 
-export const ProjectBox = ({ title, description, tecnologes, image, linkGithub, linkDemo, animationDelay }) => {
+export const ProjectBox = ({ title, description, tecnologes, images, linkGithub, linkDemo, animationDelay }) => {
     const { t } = useTranslation();
 
     return (
@@ -21,7 +21,32 @@ export const ProjectBox = ({ title, description, tecnologes, image, linkGithub, 
             className='project-box'
         >
             <div className='project-info'>
-                <h3>{t(title)}</h3>
+                <div className='project-title'>
+                    <h3>{t(title)}</h3>
+                    <div className='project-btns'>
+                        {/* <button><MdOutlinePhotoSizeSelectActual /></button> */}
+                        {
+                            linkGithub &&
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={linkGithub}
+                            >
+                                <FiGithub />
+                            </a>
+                        }
+                        {
+                            linkDemo &&
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={linkDemo}
+                            >
+                                <FiEye />
+                            </a>
+                        }
+                    </div>
+                </div>
                 <p>{t(description)}</p>
                 <ul>
                     {tecnologes.map((tech, index) => (
@@ -34,31 +59,8 @@ export const ProjectBox = ({ title, description, tecnologes, image, linkGithub, 
                 </ul>
             </div>
             <div className='project-image'>
-                <div className='project-btns'>
-                    {/* <button><MdOutlinePhotoSizeSelectActual /></button> */}
-                    {
-                        linkGithub &&
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={linkGithub}
-                        >
-                            <FiGithub />
-                        </a>
-                    }
-                    {
-                        linkDemo &&
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={linkDemo}
-                        >
-                            <FiEye />
-                        </a>
-                    }
-                </div>
                 <img
-                    src={image}
+                    src={images[0]}
                     alt={t(title)}
                     loading='lazy'
                 />
@@ -66,3 +68,27 @@ export const ProjectBox = ({ title, description, tecnologes, image, linkGithub, 
         </motion.div>
     );
 };
+
+// <div className='project-btns'>
+//     {/* <button><MdOutlinePhotoSizeSelectActual /></button> */}
+//     {
+//         linkGithub &&
+//         <a
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             href={linkGithub}
+//         >
+//             <FiGithub />
+//         </a>
+//     }
+//     {
+//         linkDemo &&
+//         <a
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             href={linkDemo}
+//         >
+//             <FiEye />
+//         </a>
+//     }
+// </div>

@@ -21,7 +21,7 @@
 }
 
 .info-section hr {
-    border: 1px solid var(--main-border-color);
+    border: 1px solid var(--main-text-color);
     width: 80%;
     margin: 20px 0;
 }

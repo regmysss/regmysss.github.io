@@ -18,12 +18,14 @@
 
 @media (hover: hover) {
     .compactSize:hover {
-        background-color: var(--main-background-color);
+        background-color: var(--main-bg-color);
+        transition: background-color 0.2s ease;
     }
 }
 
 .fullSize {
-    background-color: var(--secondary-background-color);
+    background-color: var(--main-bg-box);
+    border: var(--main-border);
     text-decoration: none;
     color: var(--main-text-color);
     border-radius: 10px;

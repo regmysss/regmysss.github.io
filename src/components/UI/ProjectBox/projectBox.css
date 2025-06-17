@@ -1,5 +1,6 @@
 .project-box {
-    background-color: var(--main-background-color);
+    background-color: var(--secondary-bg-box);
+    border: var(--secondary-border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +37,8 @@
 .project-info ul li {
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--secondary-background-color);
+    background-color: var(--main-bg-box);
+    border: var(--main-border);
     color: var(--main-text-color);
 }
 
@@ -51,32 +53,42 @@
     width: 100%;
     object-fit: cover;
     object-position: top;
-    filter: brightness(0.5);
     border-radius: 10px;
+    border: var(--main-border);
+}
+
+.project-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .project-btns button,
 .project-btns a {
     all: unset;
-    background-color: var(--main-background-color);
+    background-color: var(--main-bg-box);
+    border: var(--main-border);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
     border-radius: 10px;
+    width: 40px;
+    height: 40px;
     color: var(--main-text-color);
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
 }
 
-.project-btns {
-    z-index: 1;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+.project-btns button:hover,
+.project-btns a:hover {
+    background-color: var(--hover-bg-color);
+    transition: background-color 0.2s ease;
+}
+
+.project-title {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
 }

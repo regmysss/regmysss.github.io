@@ -1,6 +1,6 @@
 #home {
-    background-color: var(--main-background-color);
-    scroll-margin-top: 80px;
+    background-color: var(--main-bg-color);
+    scroll-margin-top: 70px;
 }
 
 .home-wrapper {
@@ -14,7 +14,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 150px);
     margin: auto;
     max-width: 1400px;
     gap: 70px;
@@ -31,19 +31,12 @@
     color: var(--main-text-color);
 }
 
-.home-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.btn-projects,
-.btn-contact-home {
+.btn-projects {
     all: unset;
     padding: 15px 30px;
-    background-color: var(--main-button-background-color);
-    color: var(--main-button-text-color);
+    background-color: var(--main-button-bg-color);
+    color: white;
     font-size: var(--medium-font-size);
-    font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
 }
