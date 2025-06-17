@@ -29,7 +29,7 @@ export const Header = () => {
     }, []);
 
     const toggleMenu = () => {
-        if (currentWidth >= 778) return;
+        if (currentWidth >= 1000) return;
 
         setIsMenuOpen(!isMenuOpen);
     };
@@ -39,7 +39,7 @@ export const Header = () => {
             <div className='header-wrapper'>
                 <div className='header-content'>
                     {
-                        currentWidth > 975 ?
+                        currentWidth > 1000 ?
                             (
                                 <nav className='nav'>
                                     <ul className='nav-list'>

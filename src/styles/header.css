@@ -31,6 +31,10 @@
     font-size: var(--medium-font-size);
 }
 
+.nav-list svg {
+    margin-right: 5px;
+}
+
 .nav-list li {
     cursor: pointer;
 }
@@ -130,7 +134,7 @@
     }
 }
 
-@media (max-width: 975px) {
+@media (max-width: 1000px) {
     .header-content {
         flex-direction: column-reverse;
         align-items: center;
