@@ -39,7 +39,7 @@ html[data-theme="dark"] {
   --selection-text-color: #E00000;
   --main-bg-box: rgba(255, 255, 255, 0.05);
   --main-border: 1px solid rgba(255, 255, 255, 0.15);
-  --secondary-bg-box: rgba(255, 255, 255, 0.05);
+  --secondary-bg-box: rgba(255, 255, 255, 0.07);
   --secondary-border: 1px solid rgba(255, 255, 255, 0.15);
   --hover-bg-color: rgba(255, 255, 255, 0.15);
 }
