@@ -7,6 +7,7 @@
     width: 100%;
     box-shadow: 0 1px 15px var(--main-shadow-color);
     color: var(--main-text-color);
+    border-bottom: var(--main-border);
 }
 
 .header-wrapper {
@@ -74,11 +75,13 @@
     border-radius: 10px;
 }
 
-.btn-menu:hover,
-.btn-theme:hover,
-.btn-lang:hover {
-    background-color: var(--hover-bg-color);
-    transition: background-color 0.2s ease;
+@media (hover: hover) {
+
+    .btn-theme:hover,
+    .btn-lang:hover {
+        background-color: var(--hover-bg-color);
+        transition: background-color 0.2s ease;
+    }
 }
 
 .btn-lang,
@@ -95,7 +98,7 @@
 }
 
 .btn-menu {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .btn-lang .icon {

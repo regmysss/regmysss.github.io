@@ -78,7 +78,7 @@ export const Header = () => {
                                                             transition={{ duration: 0.3, delay: index * 0.1 }}
                                                             onClick={toggleMenu}
                                                         >
-                                                            <a href={item.href}><item.icon />{t(item.localizationKey)}</a>
+                                                            <a href={item.href}><item.icon />{t(item.label)}</a>
                                                         </motion.li>
                                                     ))
                                                 }

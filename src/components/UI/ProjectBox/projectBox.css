@@ -80,10 +80,12 @@
     cursor: pointer;
 }
 
-.project-btns button:hover,
-.project-btns a:hover {
-    background-color: var(--hover-bg-color);
-    transition: background-color 0.2s ease;
+@media (hover: hover) {
+    .project-btns button:hover,
+    .project-btns a:hover {
+        background-color: var(--hover-bg-color);
+        transition: background-color 0.2s ease;
+    }
 }
 
 .project-title {
