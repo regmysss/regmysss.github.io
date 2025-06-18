@@ -62,6 +62,9 @@
             },
             "footer": {
                 "copyright": "© {{date}} Vladyslav Yarmolyuk. All rights reserved."
+            },
+            "imageModal": {
+                "description": "Image {{currentImage}} of {{totalImages}}"
             }
         }
     }

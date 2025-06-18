@@ -43,7 +43,6 @@
 }
 
 .project-image {
-    position: relative;
     height: 250px;
     width: 100%;
 }
@@ -80,7 +79,7 @@
     cursor: pointer;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .project-btns button:hover,
     .project-btns a:hover {
         background-color: var(--hover-bg-color);
@@ -90,7 +89,7 @@
 
 .project-title {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     gap: 10px;
 }

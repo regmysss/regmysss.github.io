@@ -1,5 +1,4 @@
 #projects {
-    position: relative;
     background-color: var(--secondary-bg-color);
     scroll-margin-top: 70px;
 }

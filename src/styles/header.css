@@ -1,6 +1,6 @@
 #header {
+    z-index: 100;
     background-color: var(--main-bg-color);
-    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
@@ -79,8 +79,9 @@
     border-radius: 10px;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
 
+    .btn-menu:hover,
     .btn-theme:hover,
     .btn-lang:hover {
         background-color: var(--hover-bg-color);

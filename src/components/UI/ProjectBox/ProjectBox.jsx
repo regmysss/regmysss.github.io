@@ -1,10 +1,13 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ImageModal } from '../../ImageModal';
+import { motion } from 'framer-motion';
 import { FiGithub, FiEye } from "react-icons/fi";
-// import { MdOutlinePhotoSizeSelectActual } from "react-icons/md";
+import { MdOutlinePhotoSizeSelectActual } from "react-icons/md";
 import './projectBox.css';
 
 export const ProjectBox = ({ title, description, tecnologes, images, linkGithub, linkDemo, animationDelay }) => {
+    const [isOpenModal, setOpenModal] = useState(false);
     const { t } = useTranslation();
 
     return (
@@ -24,7 +27,11 @@ export const ProjectBox = ({ title, description, tecnologes, images, linkGithub,
                 <div className='project-title'>
                     <h3>{t(title)}</h3>
                     <div className='project-btns'>
-                        {/* <button><MdOutlinePhotoSizeSelectActual /></button> */}
+                        <button
+                            onClick={() => setOpenModal(true)}
+                        >
+                            <MdOutlinePhotoSizeSelectActual />
+                        </button>
                         {
                             linkGithub &&
                             <a
@@ -65,30 +72,12 @@ export const ProjectBox = ({ title, description, tecnologes, images, linkGithub,
                     loading='lazy'
                 />
             </div>
+            <ImageModal
+                title={t(title)}
+                images={images}
+                isOpen={isOpenModal}
+                setOpen={() => setOpenModal(false)}
+            />
         </motion.div>
     );
 };
-
-// <div className='project-btns'>
-//     {/* <button><MdOutlinePhotoSizeSelectActual /></button> */}
-//     {
-//         linkGithub &&
-//         <a
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             href={linkGithub}
-//         >
-//             <FiGithub />
-//         </a>
-//     }
-//     {
-//         linkDemo &&
-//         <a
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             href={linkDemo}
-//         >
-//             <FiEye />
-//         </a>
-//     }
-// </div>

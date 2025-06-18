@@ -16,7 +16,7 @@
     color: var(--main-text-color);
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .compactSize:hover {
         background-color: var(--main-bg-color);
         transition: background-color 0.2s ease;
