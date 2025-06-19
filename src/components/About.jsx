@@ -40,7 +40,7 @@ export const About = () => {
                         >
                             <img
                                 src="avatar.jpg"
-                                alt="photo"
+                                alt="avatar"
                                 loading="lazy"
                             />
                         </motion.div>

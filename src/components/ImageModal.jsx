@@ -38,12 +38,24 @@ export const ImageModal = ({ title, images, isOpen, setOpen }) => {
                                 <GrFormPrevious />
                             </button>
                         </div>
-                        <div className='slider-image'>
-                            <img
-                                src={images[index]}
-                                alt={images[1]}
-                                loading='lazy'
-                            />
+                        <div className='slider-container'>
+                            <div
+                                className='slider-track'
+                                style={{ transform: `translateX(-${index * 100}%)` }}
+                            >
+                                {images.map((image, idx) => (
+                                    <div
+                                        key={idx}
+                                        className='slider-image'
+                                    >
+                                        <img
+                                            src={image}
+                                            alt={`image-${idx}`}
+                                            loading='lazy'
+                                        />
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                         <div className='slider-controls'>
                             <button onClick={handleNextImage}>

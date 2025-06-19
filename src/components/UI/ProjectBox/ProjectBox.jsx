@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, lazy } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ImageModal } from '../../ImageModal';
 import { motion } from 'framer-motion';
 import { FiGithub, FiEye } from "react-icons/fi";
 import { MdOutlinePhotoSizeSelectActual } from "react-icons/md";
 import './projectBox.css';
+
+const LazyImageModal = lazy(() => import('../../ImageModal').then(module => ({ default: module.ImageModal })));
 
 export const ProjectBox = ({ title, description, tecnologes, images, linkGithub, linkDemo, animationDelay }) => {
     const [isOpenModal, setOpenModal] = useState(false);
@@ -72,7 +73,7 @@ export const ProjectBox = ({ title, description, tecnologes, images, linkGithub,
                     loading='lazy'
                 />
             </div>
-            <ImageModal
+            <LazyImageModal
                 title={t(title)}
                 images={images}
                 isOpen={isOpenModal}
