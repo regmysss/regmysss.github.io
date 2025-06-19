@@ -109,7 +109,7 @@
     border-radius: 999px;
     width: 40px;
     height: 40px;
-    color: var(--main-text-color);
+    color: black;
     font-size: 25px;
     cursor: pointer;
 }
