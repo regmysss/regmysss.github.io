@@ -81,10 +81,11 @@
 }
 
 .slider-image {
-    flex: 0 0 100%;
+    flex: 0 0 calc(100% - 20px);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px;
 }
 
 .dialog-slider img {
