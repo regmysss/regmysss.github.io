@@ -19,15 +19,15 @@
 
 .dialog-content {
     position: fixed;
-    height: 100vh;
     width: 100vw;
+    height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
-    padding: 20px;
+    justify-content: space-around;
     border-radius: 10px;
     z-index: 100;
 }
@@ -36,6 +36,8 @@
     font-size: var(--medium-font-size);
     font-weight: bold;
     color: white;
+    max-width: calc(100% - 60px);
+    text-align: center;
 }
 
 .dialog-close {
@@ -46,8 +48,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 15px;
+    right: 15px;
     font-size: 20px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
@@ -59,10 +61,10 @@
 }
 
 .dialog-slider {
-    width: 100vw;
-    height: 80vh;
     display: flex;
     justify-content: space-between;
+    height: 80%;
+    width: 100%;
 }
 
 .slider-image {

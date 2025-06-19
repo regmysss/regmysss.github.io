@@ -6,6 +6,11 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+html,
+body {
+  position: relative;
+}
+
 :root {
   --small-font-size: 16px;
   --medium-font-size: 22px;
