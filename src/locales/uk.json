@@ -75,7 +75,9 @@
                 "copyright": "© {{date}} Владислав Ярмолюк. Всі права захищено."
             },
             "imageModal": {
-                "description": "Зображення {{currentImage}} з {{totalImages}}"
+                "description": "Зображення {{currentImage}} з {{totalImages}}",
+                "nextImage": "Наступне зображення",
+                "prevImage": "Попереднє зображення"
             }
         }
     }

@@ -42,6 +42,7 @@ export const ProjectBox = ({
                         <button
                             onClick={() => setOpenModal(true)}
                             title={t("projects.viewImages")}
+                            aria-label={t("projects.viewImages")}
                         >
                             <MdOutlinePhotoSizeSelectActual />
                         </button>

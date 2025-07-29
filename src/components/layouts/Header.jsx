@@ -92,6 +92,7 @@ export const Header = () => {
                                     changeLocale(locale === "uk" ? "en" : "uk")
                                 }
                                 title={t("header.language")}
+                                aria-label={t("header.language")}
                             >
                                 {
                                     <AnimatePresence
@@ -150,6 +151,7 @@ export const Header = () => {
                                     )
                                 }
                                 title={t("header.toggleTheme")}
+                                aria-label={t("header.toggleTheme")}
                             >
                                 <AnimatePresence mode="wait" initial={false}>
                                     {theme === "light" ? (
@@ -182,6 +184,7 @@ export const Header = () => {
                             className="btn-menu"
                             onClick={toggleMenu}
                             title={t("header.menu")}
+                            aria-label={t("header.menu")}
                         >
                             <AnimatePresence mode="wait" initial={false}>
                                 {isMenuOpen ? (

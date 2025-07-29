@@ -1,9 +1,9 @@
-import * as Dialog from '@radix-ui/react-dialog';
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import * as Dialog from "@radix-ui/react-dialog";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import { FiX } from "react-icons/fi";
-import '../../styles/imageModal.css';
+import "../../styles/imageModal.css";
 
 export const ImageModal = ({ title, images, isOpen, setOpen }) => {
     const { t } = useTranslation();
@@ -11,68 +11,75 @@ export const ImageModal = ({ title, images, isOpen, setOpen }) => {
 
     const handleNextImage = () => {
         setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }
+    };
 
     const handlePrevImage = () => {
-        setIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    }
+        setIndex(
+            (prevIndex) => (prevIndex - 1 + images.length) % images.length
+        );
+    };
 
     return (
         <Dialog.Root open={isOpen} onOpenChange={setOpen}>
             <Dialog.Portal>
                 <Dialog.Overlay
-                    className='dialog-overlay'
+                    className="dialog-overlay"
                     style={{ backgroundImage: `url(${images[index]})` }}
                 />
-                <Dialog.Content className='dialog-content'>
-                    <Dialog.Title className='dialog-title' >
+                <Dialog.Content className="dialog-content">
+                    <Dialog.Title className="dialog-title">
                         {title}
                     </Dialog.Title>
-                    <Dialog.Close className='dialog-close'>
+                    <Dialog.Close className="dialog-close">
                         <FiX />
                     </Dialog.Close>
 
-                    <div className='dialog-slider'>
-                        <div className='slider-controls'>
-                            <button onClick={handlePrevImage}>
+                    <div className="dialog-slider">
+                        <div className="slider-controls">
+                            <button
+                                onClick={handlePrevImage}
+                                title={t("imageModal.previousImage")}
+                                aria-label={t("imageModal.previousImage")}
+                            >
                                 <GrFormPrevious />
                             </button>
                         </div>
-                        <div className='slider-container'>
+                        <div className="slider-container">
                             <div
-                                className='slider-track'
-                                style={{ transform: `translateX(-${index * 100}%)` }}
+                                className="slider-track"
+                                style={{
+                                    transform: `translateX(-${index * 100}%)`,
+                                }}
                             >
                                 {images.map((image, idx) => (
-                                    <div
-                                        key={idx}
-                                        className='slider-image'
-                                    >
+                                    <div key={idx} className="slider-image">
                                         <img
                                             src={image}
                                             alt={`image-${idx}`}
-                                            loading='lazy'
+                                            loading="lazy"
                                         />
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className='slider-controls'>
-                            <button onClick={handleNextImage}>
+                        <div className="slider-controls">
+                            <button
+                                onClick={handleNextImage}
+                                title={t("imageModal.nextImage")}
+                                aria-label={t("imageModal.nextImage")}
+                            >
                                 <GrFormNext />
                             </button>
                         </div>
                     </div>
-                    <Dialog.Description className='dialog-description'>
-                        {
-                            t("imageModal.description", {
-                                currentImage: index + 1,
-                                totalImages: images.length
-                            })
-                        }
+                    <Dialog.Description className="dialog-description">
+                        {t("imageModal.description", {
+                            currentImage: index + 1,
+                            totalImages: images.length,
+                        })}
                     </Dialog.Description>
                 </Dialog.Content>
             </Dialog.Portal>
         </Dialog.Root>
-    )
-}
+    );
+};
