@@ -29,7 +29,7 @@ Welcome to my personal portfolio website, built with **React**. This project sho
 To run the project locally:
 
 ```bash
-git clone https://github.com/regmysss/your-portfolio.git
-cd your-portfolio
+git clone https://github.com/regmysss/regmysss.github.io.git
+cd regmysss.github.io
 npm install
 npm run dev
