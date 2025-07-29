@@ -6,7 +6,10 @@
                 "projects": "Projects",
                 "skills": "Skills",
                 "about": "About",
-                "contact": "Contact"
+                "contact": "Contact",
+                "toggleTheme": "Toggle Theme",
+                "language": "Language",
+                "menu": "Menu"
             },
             "home": {
                 "welcome": "Hi! I'm <selection>Vladyslav</selection> - a Web Developer.",
@@ -18,28 +21,35 @@
                 "description": "Here are some of the projects I have worked on that showcase my skills in web and mobile development.",
                 "converterFilesTool": {
                     "title": "Converter Files Tool",
-                    "description": "A web application for converting files to various formats supported by FFmpeg. The user can upload a file and select the desired format for conversion. The system processes the files on the server and returns the finished result."
+                    "description": "A web application for converting files to various formats supported by FFmpeg. The user can upload a file and select the desired format for conversion. The system processes the files on the server and returns the finished result.",
+                    "ariaLabel": "Converter Files Tool - A web application for converting files to various formats supported by FFmpeg."
                 },
                 "detectingFoodAI": {
                     "title": "Detecting Food (AI)",
-                    "description": "An AI-powered application that identifies food items in images. Users can upload photos, and the system uses machine learning to recognize and classify different types of food, providing nutritional information and suggestions."
+                    "description": "An AI-powered application that identifies food items in images. Users can upload photos, and the system uses machine learning to recognize and classify different types of food, providing nutritional information and suggestions.",
+                    "ariaLabel": "Detecting Food (AI) - An AI-powered application that identifies food items in images."
                 },
                 "carPlateRecognition": {
                     "title": "Car Plate Recognition (AI)",
-                    "description": "An AI-based tool that recognizes and extracts information from car license plates in images. It can be used for various applications, including parking management and traffic monitoring."
+                    "description": "An AI-based tool that recognizes and extracts information from car license plates in images. It can be used for various applications, including parking management and traffic monitoring.",
+                    "ariaLabel": "Car Plate Recognition (AI) - An AI-based tool that recognizes and extracts information from car license plates in images."
                 },
                 "currencyConverter": {
                     "title": "Currency Converter",
-                    "description": "A mobile application that allows users to convert currencies in real-time using the latest exchange rates. It supports multiple currencies and provides a user-friendly interface."
+                    "description": "A mobile application that allows users to convert currencies in real-time using the latest exchange rates. It supports multiple currencies and provides a user-friendly interface.",
+                    "ariaLabel": "Currency Converter - A mobile application for real-time currency conversion."
                 },
                 "mediaCompressor": {
                     "title": "Media Compressor Tool",
-                    "description": "A Windows tool for compressing media files, including images and videos, to reduce their size without significant loss of quality. It supports various formats and provides options for adjusting compression levels."
+                    "description": "A Windows tool for compressing media files, including images and videos, to reduce their size without significant loss of quality. It supports various formats and provides options for adjusting compression levels.",
+                    "ariaLabel": "Media Compressor Tool - A Windows tool for compressing media files."
                 },
                 "climateVisualizationPlatform": {
                     "title": "Climate Visualization Platform",
-                    "description": "A collaborative project with a team of 2, where we developed a website featuring a map displaying temperature readings from multiple measuring stations, isolines, and the temperature gradient."
-                }
+                    "description": "A collaborative project with a team of 2, where we developed a website featuring a map displaying temperature readings from multiple measuring stations, isolines, and the temperature gradient.",
+                    "ariaLabel": "Climate Visualization Platform - A collaborative project featuring a map displaying temperature readings and isolines."
+                },
+                "viewImages": "View Images"
             },
             "skills": {
                 "title": "What I Know",
@@ -58,7 +68,8 @@
             },
             "contact": {
                 "title": "Get in Touch",
-                "description": "Feel free to reach out for collaborations, inquiries, or just a friendly chat."
+                "description": "Feel free to reach out for collaborations, inquiries, or just a friendly chat.",
+                "ariaLabel": "Contact for help on {{name}}"
             },
             "footer": {
                 "copyright": "© {{date}} Vladyslav Yarmolyuk. All rights reserved."

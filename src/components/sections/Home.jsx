@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation, Trans } from 'react-i18next';
-import '../styles/home.css';
+import '../../styles/home.css';
 
 export const Home = () => {
     const { t } = useTranslation();

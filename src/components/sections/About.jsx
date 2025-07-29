@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { InfoSection } from "./UI/InfoSection/InfoSection";
-import { useTranslation, Trans } from 'react-i18next';
-import '../styles/about.css';
+import { useTranslation, Trans } from "react-i18next";
+import { InfoSection } from "../ui_r/InfoSection";
+import "../../styles/about.css";
 
 export const About = () => {
     const { t } = useTranslation();
 
     return (
-        <section id='about'>
-            <div className='about-wrapper'>
-                <div className='about-content'>
+        <section id="about">
+            <div className="about-wrapper">
+                <div className="about-content">
                     <InfoSection
                         title={t("about.title")}
                         description={t("about.description")}
                     />
-                    <div className='about-info'>
+                    <div className="about-info">
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className='about-text'
+                            className="about-text"
                         >
                             <Trans
                                 i18nKey="about.details"
@@ -36,11 +36,11 @@ export const About = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className='about-photo'
+                            className="about-photo"
                         >
                             <img
                                 src="avatar.jpg"
-                                alt="avatar"
+                                alt="Vladyslav Yarmolyuk Photo"
                                 loading="lazy"
                             />
                         </motion.div>
@@ -48,5 +48,5 @@ export const About = () => {
                 </div>
             </div>
         </section>
-    )
+    );
 };

@@ -1,8 +1,8 @@
-import { InfoSection } from "./UI/InfoSection/InfoSection";
 import { useTranslation } from 'react-i18next';
-import { getSkills } from "../data/skills";
+import { getSkills } from "../../data/skills";
 import { motion } from "framer-motion";
-import '../styles/skills.css';
+import '../../styles/skills.css';
+import { InfoSection } from '../ui_r/InfoSection';
 
 export const Skills = () => {
     const { t } = useTranslation();

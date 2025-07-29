@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import { FiX } from "react-icons/fi";
-import '../styles/imageModal.css';
+import '../../styles/imageModal.css';
 
 export const ImageModal = ({ title, images, isOpen, setOpen }) => {
     const { t } = useTranslation();

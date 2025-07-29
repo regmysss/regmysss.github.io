@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import './infoSection.css';
+import '../../styles/infoSection.css';
 
 export const InfoSection = ({ title, description }) => {
     return (
