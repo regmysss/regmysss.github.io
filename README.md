@@ -5,29 +5,31 @@ Welcome to my personal portfolio website, built with **React**. This project sho
 ## 🚀 Tech Stack
 
 - **Framework**: React
+- **Styling**: CSS
 - **Icons**: React-Icons
+- **Animations**: Framer Motion
+- **Localization**: i18next
 - **Deployment**: GitHub Pages
-- **Animation**: FrameMotion
-- **Localization**: l18n
 
 ## 🧩 Features
 
-- Modern, responsive UI
-- Clean layout with clear navigation
-- Animated transitions and interactive elements
-- Project showcase with live demo and GitHub links
-- SEO-ready and accessible
+- Modern and responsive UI
+- Clean layout with intuitive navigation
+- Smooth animations and transitions
+- Multilingual support (i18n)
+- Projects section with live demos and GitHub repositories
+- SEO-ready and accessible design
 
 ## 📸 Preview
 
-[Live Demo](https://regmysss.github.io/)
+🌐 [Live Demo](https://regmysss.github.io/)
 
 ## 🛠️ Setup & Development
 
-Clone the project:
+To run the project locally:
 
 ```bash
-git clone https://github.com/yourusername/your-portfolio.git
+git clone https://github.com/regmysss/your-portfolio.git
 cd your-portfolio
 npm install
 npm run dev
