@@ -1,7 +1,7 @@
 import { socials } from "../../data/socials";
 import { useTranslation } from "react-i18next";
 import "../../styles/footer.css";
-import { Social } from "../ui_r/Social";
+import { Social } from "../ui/Social";
 
 export const Footer = () => {
     const { t } = useTranslation();

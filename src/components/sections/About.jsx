@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation, Trans } from "react-i18next";
-import { InfoSection } from "../ui_r/InfoSection";
+import { InfoSection } from "../ui/InfoSection";
 import "../../styles/about.css";
 
 export const About = () => {

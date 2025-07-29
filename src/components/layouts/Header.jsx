@@ -45,7 +45,7 @@ export const Header = () => {
                                     <li key={index} onClick={toggleMenu}>
                                         <a href={item.href}>
                                             <item.icon />
-                                            {t(item.label)}
+                                            {item.label}
                                         </a>
                                     </li>
                                 ))}
@@ -75,7 +75,7 @@ export const Header = () => {
                                             >
                                                 <a href={item.href}>
                                                     <item.icon />
-                                                    {t(item.label)}
+                                                    {item.label}
                                                 </a>
                                             </motion.li>
                                         ))}

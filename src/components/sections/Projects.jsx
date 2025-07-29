@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { getProjects } from "../../data/projects";
 import "../../styles/projects.css";
-import { InfoSection } from "../ui_r/InfoSection";
-import { ProjectBox } from "../ui_r/ProjectBox";
+import { InfoSection } from "../ui/InfoSection";
+import { ProjectBox } from "../ui/ProjectBox";
 
 export const Projects = () => {
     const { t } = useTranslation();

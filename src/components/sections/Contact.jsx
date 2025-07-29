@@ -2,8 +2,8 @@ import { socials } from "../../data/socials";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import "../../styles/contact.css";
-import { InfoSection } from "../ui_r/InfoSection";
-import { Social } from "../ui_r/Social";
+import { InfoSection } from "../ui/InfoSection";
+import { Social } from "../ui/Social";
 
 export const Contact = () => {
     const { t } = useTranslation();

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { getSkills } from "../../data/skills";
 import { motion } from "framer-motion";
 import '../../styles/skills.css';
-import { InfoSection } from '../ui_r/InfoSection';
+import { InfoSection } from '../ui/InfoSection';
 
 export const Skills = () => {
     const { t } = useTranslation();
@@ -21,7 +21,7 @@ export const Skills = () => {
                         {
                             skills.map((category, index) => (
                                 <div key={index} className="skills-column">
-                                    <h3>{t(category.category)}</h3>
+                                    <h3>{category.category}</h3>
                                     <ul                                    >
                                         {category.skills.map((item, idx) => (
                                             <motion.li
