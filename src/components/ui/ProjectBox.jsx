@@ -16,11 +16,12 @@ export const ProjectBox = ({
     images,
     linkGithub,
     linkDemo,
-    animationDelay,
     ariaLabel,
 }) => {
     const [isOpenModal, setOpenModal] = useState(false);
     const { t } = useTranslation();
+
+    const animationDelay = Math.random() * 0.2 + 0.05;
 
     return (
         <motion.div

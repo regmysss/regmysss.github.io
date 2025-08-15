@@ -21,7 +21,7 @@ export const Contact = () => {
                             <Social
                                 key={index}
                                 link={social.link}
-                                animationDelay={index * 0.1}
+                                animationDelay={index * 0.05}
                                 typeSocial="fullSize"
                                 ariaLabel={social.name}
                             >

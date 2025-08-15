@@ -27,7 +27,6 @@ export const Projects = () => {
                                 linkGithub={project.linkGithub}
                                 linkDemo={project.linkDemo}
                                 ariaLabel={project.ariaLabel}
-                                animationDelay={index * 0.1}
                             />
                         ))}
                     </div>
