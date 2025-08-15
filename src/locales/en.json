@@ -49,6 +49,16 @@
                     "description": "A collaborative project with a team of 2, where we developed a website featuring a map displaying temperature readings from multiple measuring stations, isolines, and the temperature gradient.",
                     "ariaLabel": "Climate Visualization Platform - A collaborative project featuring a map displaying temperature readings and isolines."
                 },
+                "RockPaperScissors": {
+                    "title": "Rock Paper Scissors Game",
+                    "description": "A simple web-based game where users can play Rock Paper Scissors against the computer. It features a user-friendly interface and keeps track of scores.",
+                    "ariaLabel": "Rock Paper Scissors Game - A simple web-based game to play against the computer."
+                },
+                "FantasyFootball": {
+                    "title": "Fantasy Football",
+                    "description": "Fantasy Football is a visually appealing single-page web application that presents the concept of fantasy football. It encourages players to create teams, analyze football player performance, and compete with others.",
+                    "ariaLabel": "Fantasy Football - A visually appealing single-page web application for fantasy football."
+                },
                 "viewImages": "View Images"
             },
             "skills": {

@@ -70,4 +70,22 @@ export const getProjects = (t) => [
         linkGithub: "https://github.com/regmysss/Converter-Files",
         ariaLabel: t("projects.converterFilesTool.ariaLabel"),
     },
+    {
+        title: t("projects.RockPaperScissors.title"),
+        description: t("projects.RockPaperScissors.description"),
+        tecnologes: ["React", "TypeScript"],
+        images: getProjectImages("RockPaperScissors"),
+        linkGithub: "https://github.com/regmysss/rock-paper-scissors",
+        linkDemo: "https://rock-paper-scissors-rosy-sigma.vercel.app/",
+        ariaLabel: t("projects.RockPaperScissors.ariaLabel"),
+    },
+    {
+        title: t("projects.FantasyFootball.title"),
+        description: t("projects.FantasyFootball.description"),
+        tecnologes: ["Next.js", "Emotion.js"],
+        images: getProjectImages("FantasyFootball"),
+        linkGithub: "https://github.com/regmysss/fantasy-football",
+        linkDemo: "https://fantasy-football-silk.vercel.app/",
+        ariaLabel: t("projects.FantasyFootball.ariaLabel"),
+    }
 ];
