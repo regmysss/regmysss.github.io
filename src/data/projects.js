@@ -80,6 +80,15 @@ export const getProjects = (t) => [
         ariaLabel: t("projects.RockPaperScissors.ariaLabel"),
     },
     {
+        title: t("projects.RollCraftGame.title"),
+        description: t("projects.RollCraftGame.description"),
+        tecnologes: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
+        images: getProjectImages("RollCraftGame"),
+        linkGithub: "https://github.com/regmysss/roll-craft-game",
+        linkDemo: "https://roll-craft-game-henna.vercel.app/",
+        ariaLabel: t("projects.RollCraftGame.ariaLabel"),
+    },
+    {
         title: t("projects.FantasyFootball.title"),
         description: t("projects.FantasyFootball.description"),
         tecnologes: ["Next.js", "Emotion.js"],

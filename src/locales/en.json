@@ -59,6 +59,11 @@
                     "description": "Fantasy Football is a visually appealing single-page web application that presents the concept of fantasy football. It encourages players to create teams, analyze football player performance, and compete with others.",
                     "ariaLabel": "Fantasy Football - A visually appealing single-page web application for fantasy football."
                 },
+                "RollCraftGame": {
+                    "title": "Roll Craft Game",
+                    "description": "Roll Craft is an interactive browser game. Players flip cards to reveal different outcomes: cash, multipliers, zero, bomb, or stop — each affecting the score and the flow of the game.",
+                    "ariaLabel": "Roll Craft Game - An interactive browser game."
+                },
                 "viewImages": "View Images"
             },
             "skills": {
